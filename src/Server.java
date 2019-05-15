@@ -124,11 +124,11 @@ public class Server extends Thread {
     void refreshPersonalChatHistory() throws Exception {
         String withUsername = inputStream.readUTF();
 
-        ArrayList<Message> messageList = clientDetails.getMessageList(withUsername);
+        ArrayList<MessageDetails> messageList = clientDetails.getMessageList(withUsername);
 
         outputStream.writeUTF(messageList.size() + "");
 
-        for (Message message : messageList) {
+        for (MessageDetails message : messageList) {
             outputStream.writeUTF(message.userInvolved);
             outputStream.writeUTF(message.timeStamp);
             outputStream.writeUTF(message.message);
@@ -142,11 +142,11 @@ public class Server extends Thread {
         for (String withUsername : DATABASE.keySet()) {
             outputStream.writeUTF(withUsername);
 
-            ArrayList<Message> messageList = clientDetails.getMessageList(withUsername);
+            ArrayList<MessageDetails> messageList = clientDetails.getMessageList(withUsername);
 
             outputStream.writeUTF(messageList.size() + "");
 
-            for (Message message : messageList) {
+            for (MessageDetails message : messageList) {
                 outputStream.writeUTF(message.userInvolved);
                 outputStream.writeUTF(message.timeStamp);
                 outputStream.writeUTF(message.message);

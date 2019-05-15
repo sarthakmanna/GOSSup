@@ -1,4 +1,5 @@
-import java.io.*;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -70,8 +71,18 @@ public class ClientSide {
 
     ArrayList<Message> refreshPersonalChatHistory(String username) throws Exception {
         outputStream.writeUTF(REFRESH_PERSONAL);
+        outputStream.writeUTF(username);
 
-        return null;
+        ArrayList<Message> personalInbox = new ArrayList<>();
+
+        int i, messageCount = Integer.parseInt(inputStream.readUTF());
+        for (i = 0; i < messageCount; ++i) {
+            Message message = new Message(inputStream.readUTF(), inputStream.readUTF(),
+                    inputStream.readUTF(), inputStream.readUTF());
+            personalInbox.add(message);
+        }
+
+        return personalInbox;
     }
 
     HashMap<String, ArrayList<Message>> refreshAllChatHistory() throws Exception {
@@ -79,7 +90,7 @@ public class ClientSide {
 
         HashMap<String, ArrayList<Message>> fullChatHistory = new HashMap<>();
 
-        /*int i, j, userCount = Integer.parseInt(inputStream.readUTF().trim());
+        int i, j, userCount = Integer.parseInt(inputStream.readUTF().trim());
         for (i = 0; i < userCount; ++i) {
             String username = inputStream.readUTF();
             ArrayList<Message> chats = new ArrayList<>();
@@ -92,20 +103,39 @@ public class ClientSide {
             }
 
             fullChatHistory.put(username, chats);
-        }*/
+        }
         return fullChatHistory;
     }
 
-    void broadCastMessage(String message) {
-
+    void broadCastMessage(String message) throws Exception {
+        outputStream.writeUTF(BROADCAST);
+        outputStream.writeUTF(message);
     }
 
-    ArrayList<String> getAllUsernames() {
-        return null;
+    ArrayList<String> getAllUsernames() throws Exception {
+        outputStream.writeUTF(GET_ALL_USERNAMES);
+
+        ArrayList<String> users = new ArrayList<>();
+        int i, userCount = Integer.parseInt(inputStream.readUTF());
+
+        for (i = 0; i < userCount; ++i) {
+            users.add(inputStream.readUTF());
+        }
+
+        return users;
     }
 
-    ArrayList<String> getOnlineUsernames() {
-        return null;
+    ArrayList<String> getOnlineUsernames() throws Exception {
+        outputStream.writeUTF(GET_ONLINE_USERNAMES);
+
+        ArrayList<String> users = new ArrayList<>();
+        int i, userCount = Integer.parseInt(inputStream.readUTF());
+
+        for (i = 0; i < userCount; ++i) {
+            users.add(inputStream.readUTF());
+        }
+
+        return users;
     }
 
 
@@ -116,33 +146,17 @@ public class ClientSide {
     private String decrypt(String originalString) {
         return originalString;
     }
+}
 
+class Message {
+    final String YES = "Y", NO = "N";
+    String userInvolved, timeStamp, message;
+    boolean isSent;
 
-
-
-
-
-    /*void startProcess() throws Exception {
-        System.out.println("Process started successfully...");
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String response = "";
-
-        do {
-            System.out.print("Choice: ");
-
-            if (br.readLine().equals("1")) {
-                response = attemptLogin(br.readLine(), br.readLine());
-            } else {
-                response = attemptLogin(br.readLine(), br.readLine(), br.readLine().equals("1"));
-            }
-
-            System.out.println(response);
-        } while (!response.equals(SUCCESSFUL_LOGIN));
-
-        System.out.println("Successful login");
+    Message(String username, String time, String msg, String isSendType) {
+        userInvolved = username;
+        timeStamp = time;
+        message = msg;
+        isSent = isSendType.equals(YES);
     }
-
-    public static void main(String[] args) throws Exception {
-        new ClientSide("192.168.0.15", 7777).startProcess();
-    }*/
 }
