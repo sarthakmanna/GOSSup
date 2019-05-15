@@ -5,12 +5,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ClientSide {
-    final String READY = "RD", SUCCESSFUL_LOGIN = "LG",
+    static final String READY = "RD", SUCCESSFUL_LOGIN = "LG",
             WRONG_PASSWORD = "WP", USERNAME_NOT_FOUND_CREATE = "NF",
             YES = "Y", NO = "N";
 
-    final String SEND = "SN", REFRESH_ALL = "RA", REFRESH_PERSONAL = "RP",
-            BROADCAST = "BR", GET_ALL_USERNAMES = "AL", GET_ONLINE_USERNAMES = "CN";
+    static final String SEND = "SN", REFRESH_ALL = "RA", REFRESH_PERSONAL = "RP",
+            BROADCAST = "BR", GET_ALL_USERS = "AL", GET_ONLINE_USERS = "CN",
+            GET_RECENT_USERS = "GF";
 
 
     Socket serverSocket;
@@ -69,6 +70,11 @@ public class ClientSide {
         outputStream.writeUTF(message);
     }
 
+    void broadCastMessage(String message) throws Exception {
+        outputStream.writeUTF(BROADCAST);
+        outputStream.writeUTF(message);
+    }
+
     ArrayList<Message> refreshPersonalChatHistory(String username) throws Exception {
         outputStream.writeUTF(REFRESH_PERSONAL);
         outputStream.writeUTF(username);
@@ -107,32 +113,46 @@ public class ClientSide {
         return fullChatHistory;
     }
 
-    void broadCastMessage(String message) throws Exception {
-        outputStream.writeUTF(BROADCAST);
-        outputStream.writeUTF(message);
-    }
+    ArrayList<User> getRecent() throws Exception {
+        outputStream.writeUTF(GET_RECENT_USERS);
 
-    ArrayList<String> getAllUsernames() throws Exception {
-        outputStream.writeUTF(GET_ALL_USERNAMES);
-
-        ArrayList<String> users = new ArrayList<>();
-        int i, userCount = Integer.parseInt(inputStream.readUTF());
+        ArrayList<User> users = new ArrayList<>();
+        int i, userCount = Integer.parseInt(inputStream.readUTF().trim());
 
         for (i = 0; i < userCount; ++i) {
-            users.add(inputStream.readUTF());
+            User user = new User(inputStream.readUTF(),
+                    inputStream.readUTF(), inputStream.readUTF());
+            users.add(user);
         }
 
         return users;
     }
 
-    ArrayList<String> getOnlineUsernames() throws Exception {
-        outputStream.writeUTF(GET_ONLINE_USERNAMES);
+    ArrayList<User> getAllUsernames() throws Exception {
+        outputStream.writeUTF(GET_ALL_USERS);
 
-        ArrayList<String> users = new ArrayList<>();
+        ArrayList<User> users = new ArrayList<>();
+        int i, userCount = Integer.parseInt(inputStream.readUTF().trim());
+
+        for (i = 0; i < userCount; ++i) {
+            User user = new User(inputStream.readUTF(),
+                    inputStream.readUTF(), inputStream.readUTF());
+            users.add(user);
+        }
+
+        return users;
+    }
+
+    ArrayList<User> getOnlineUsernames() throws Exception {
+        outputStream.writeUTF(GET_ONLINE_USERS);
+
+        ArrayList<User> users = new ArrayList<>();
         int i, userCount = Integer.parseInt(inputStream.readUTF());
 
         for (i = 0; i < userCount; ++i) {
-            users.add(inputStream.readUTF());
+            User user = new User(inputStream.readUTF(),
+                    inputStream.readUTF(), inputStream.readUTF());
+            users.add(user);
         }
 
         return users;
@@ -149,14 +169,26 @@ public class ClientSide {
 }
 
 class Message {
-    final String YES = "Y", NO = "N";
-    String userInvolved, timeStamp, message;
+    String userInvolved, message;
+    long timeStamp;
     boolean isSent;
 
     Message(String username, String time, String msg, String isSendType) {
         userInvolved = username;
-        timeStamp = time;
+        timeStamp = Long.parseLong(time);
         message = msg;
-        isSent = isSendType.equals(YES);
+        isSent = isSendType.equals(ClientSide.YES);
+    }
+}
+
+class User {
+    String USERNAME;
+    String STATUS;
+    boolean HAS_CHATTED_BEFORE;
+
+    User(String name, String status, String chattedBefore) {
+        USERNAME = name;
+        STATUS = status;
+        HAS_CHATTED_BEFORE = chattedBefore.equals(ClientSide.YES);
     }
 }

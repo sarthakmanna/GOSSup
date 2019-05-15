@@ -1,10 +1,10 @@
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 
 public class ClientDetails {
     private final String USERNAME, UNIQUEID;
     private HashMap<String, ArrayList<MessageDetails>> CONVERSATIONS;
+    long lastSeenTime;
 
     ClientDetails(String username, String uniqueID) {
         USERNAME = username; UNIQUEID = uniqueID;
@@ -15,16 +15,20 @@ public class ClientDetails {
 
     String getUniqueID() { return UNIQUEID; }
 
+    boolean hasChattedBefore(String username) { return CONVERSATIONS.containsKey(username); }
+
+    ArrayList<String> getFriends() { return new ArrayList<>(CONVERSATIONS.keySet()); }
+
     ArrayList<MessageDetails> getMessageList(String username) { return CONVERSATIONS.get(username); }
 
-    void sendMessage(String username, Date timeStamp, String message) {
+    void sendMessage(String username, long timeStamp, String message) {
         MessageDetails sentMsg = new MessageDetails(username, timeStamp, message, MessageDetails.SENT);
 
         CONVERSATIONS.putIfAbsent(username, new ArrayList<>());
         CONVERSATIONS.get(username).add(sentMsg);
     }
 
-    void receiveMessage(String username, Date timeStamp, String message) {
+    void receiveMessage(String username, long timeStamp, String message) {
         MessageDetails receivedMsg = new MessageDetails(username, timeStamp, message, MessageDetails.RECEIVED);
 
         CONVERSATIONS.putIfAbsent(username, new ArrayList<>());

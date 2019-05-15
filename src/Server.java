@@ -14,6 +14,11 @@ public class Server extends Thread {
             WRONG_PASSWORD = "WP", USERNAME_NOT_FOUND_CREATE = "NF",
             YES = "Y", NO = "N";
 
+    final String SEND = "SN", REFRESH_ALL = "RA", REFRESH_PERSONAL = "RP",
+            BROADCAST = "BR", GET_ALL_USERS = "AL", GET_ONLINE_USERS = "CN",
+            GET_RECENT_USERS = "GF";
+
+
     Socket clientSocket;
     ClientDetails clientDetails;
 
@@ -30,9 +35,6 @@ public class Server extends Thread {
         // Client is expected to send the username and hash(username + password)
     }
 
-    final String SEND = "SN", REFRESH_ALL = "RA", REFRESH_PERSONAL = "RP",
-            BROADCAST = "BR", GET_ALL_USERNAMES = "AL", GET_ONLINE_USERNAMES = "CN";
-
     @Override
     public void run() {
         try {
@@ -43,20 +45,15 @@ public class Server extends Thread {
             while (clientSocket.isConnected()) {
                 String command = inputStream.readUTF();
 
-                if (command.equals(SEND)) {
-                    sendMessage();
-                } else if (command.equals(REFRESH_ALL)) {
-                    refreshAllChatHistory();
-                } else if (command.equals(REFRESH_PERSONAL)) {
-                    refreshPersonalChatHistory();
-                } else if (command.equals(BROADCAST)) {
-                    broadcastMessage();
-                } else if (command.equals(GET_ALL_USERNAMES)) {
-                    getAllUsernames();
-                } else if (command.equals(GET_ONLINE_USERNAMES)) {
-                    getOnlineUsernames();
-                } else {
-                    System.out.println("WRONG COMMAND: " + command);
+                switch (command) {
+                    case SEND: sendMessage(); break;
+                    case REFRESH_ALL: refreshAllChatHistory(); break;
+                    case REFRESH_PERSONAL: refreshPersonalChatHistory(); break;
+                    case BROADCAST: broadcastMessage(); break;
+                    case GET_ALL_USERS: getAllUsers(); break;
+                    case GET_ONLINE_USERS: getOnlineUsers(); break;
+                    case GET_RECENT_USERS: getRecentUsers(); break;
+                    default: System.out.println("WRONG COMMAND: " + command);
                 }
             }
             System.out.println("User " + clientDetails.getUsername()
@@ -67,8 +64,10 @@ public class Server extends Thread {
             clientSocket.close();
         } catch (Exception e) {
         } finally {
-            if (clientDetails != null)
+            if (clientDetails != null) {
+                clientDetails.lastSeenTime = new Date().getTime();
                 ACTIVE_CLIENTS.remove(clientDetails.getUsername());
+            }
         }
     }
 
@@ -111,7 +110,7 @@ public class Server extends Thread {
 
     void sendMessage() throws Exception {
         String destUsername = inputStream.readUTF();
-        Date timeStamp = new Date();
+        long timeStamp = new Date().getTime();
         String message = inputStream.readUTF();
 
         ClientDetails sender = clientDetails,
@@ -130,7 +129,7 @@ public class Server extends Thread {
 
         for (MessageDetails message : messageList) {
             outputStream.writeUTF(message.userInvolved);
-            outputStream.writeUTF(message.timeStamp);
+            outputStream.writeUTF(message.timeStamp + "");
             outputStream.writeUTF(message.message);
             outputStream.writeUTF(message.isSent ? YES : NO);
         }
@@ -148,7 +147,7 @@ public class Server extends Thread {
 
             for (MessageDetails message : messageList) {
                 outputStream.writeUTF(message.userInvolved);
-                outputStream.writeUTF(message.timeStamp);
+                outputStream.writeUTF(message.timeStamp + "");
                 outputStream.writeUTF(message.message);
                 outputStream.writeUTF(message.isSent ? YES : NO);
             }
@@ -156,7 +155,7 @@ public class Server extends Thread {
     }
 
     void broadcastMessage() throws Exception {
-        Date timeStamp = new Date();
+        long timeStamp = new Date().getTime();
         String message = inputStream.readUTF();
 
         for (String destUsername : DATABASE.keySet()) {
@@ -168,19 +167,46 @@ public class Server extends Thread {
         }
     }
 
-    void getAllUsernames() throws Exception {
+    void getAllUsers() throws Exception {
         outputStream.writeUTF(DATABASE.size() + "");
 
         for (String user : DATABASE.keySet()) {
-            outputStream.writeUTF(user);
+            ClientDetails userDetails = DATABASE.get(user);
+
+            outputStream.writeUTF(userDetails.getUsername());
+            outputStream.writeUTF(ACTIVE_CLIENTS.contains(user) ? "ONLINE" :
+                    userDetails.lastSeenTime + "");
+            outputStream.writeUTF(clientDetails.hasChattedBefore(user) ?
+                    YES : NO);
         }
     }
 
-    void getOnlineUsernames() throws Exception {
+    void getOnlineUsers() throws Exception {
         outputStream.writeUTF(ACTIVE_CLIENTS.size() + "");
 
         for (String user : ACTIVE_CLIENTS) {
-            outputStream.writeUTF(user);
+            ClientDetails userDetails = DATABASE.get(user);
+
+            outputStream.writeUTF(userDetails.getUsername());
+            outputStream.writeUTF(ACTIVE_CLIENTS.contains(user) ? "ONLINE" :
+                    userDetails.lastSeenTime + "");
+            outputStream.writeUTF(clientDetails.hasChattedBefore(user) ?
+                    YES : NO);
+        }
+    }
+
+    void getRecentUsers() throws Exception {
+        ArrayList<String> recentUsers = clientDetails.getFriends();
+        outputStream.writeUTF(recentUsers.size() + "");
+
+        for (String user : recentUsers) {
+            ClientDetails userDetails = DATABASE.get(user);
+
+            outputStream.writeUTF(userDetails.getUsername());
+            outputStream.writeUTF(ACTIVE_CLIENTS.contains(user) ? "ONLINE" :
+                    userDetails.lastSeenTime + "");
+            outputStream.writeUTF(clientDetails.hasChattedBefore(user) ?
+                    YES : NO);
         }
     }
 }
