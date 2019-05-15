@@ -92,6 +92,7 @@ public class Server extends Thread {
                 }
             } else {
                 outputStream.writeUTF(USERNAME_NOT_FOUND_CREATE);
+
                 String response = inputStream.readUTF();
 
                 if (response.equals(YES)) {
@@ -101,6 +102,8 @@ public class Server extends Thread {
                     return;
                 } else if (response.equals(NO)) {
                     outputStream.writeUTF(WRONG_PASSWORD);
+                } else {
+                    System.err.println("Error in communicating...");
                 }
             }
         }
@@ -126,10 +129,10 @@ public class Server extends Thread {
         outputStream.writeUTF(messageList.size() + "");
 
         for (Message message : messageList) {
-            outputStream.writeUTF(message.isSent ? "SENT" : "RECEIVED");
             outputStream.writeUTF(message.userInvolved);
             outputStream.writeUTF(message.timeStamp);
             outputStream.writeUTF(message.message);
+            outputStream.writeUTF(message.isSent ? YES : NO);
         }
     }
 
@@ -144,10 +147,10 @@ public class Server extends Thread {
             outputStream.writeUTF(messageList.size() + "");
 
             for (Message message : messageList) {
-                outputStream.writeUTF(message.isSent ? "SENT" : "RECEIVED");
                 outputStream.writeUTF(message.userInvolved);
                 outputStream.writeUTF(message.timeStamp);
                 outputStream.writeUTF(message.message);
+                outputStream.writeUTF(message.isSent ? YES : NO);
             }
         }
     }
