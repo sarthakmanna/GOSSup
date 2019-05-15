@@ -1,10 +1,15 @@
-import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.Socket;
 
 public class ClientSide {
+    final String READY = "RD", SUCCESSFUL_LOGIN = "LG",
+            WRONG_PASSWORD = "WP", USERNAME_NOT_FOUND_CREATE = "NF",
+            YES = "Y", NO = "N";
+
+    final String SEND = "SN", REFRESH_ALL = "RA", REFRESH_PERSONAL = "RP",
+            BROADCAST = "BR", GET_ALL_USERNAMES = "AL", GET_ONLINE_USERNAMES = "CN";
+
+
     Socket serverSocket;
 
     DataInputStream inputStream;
@@ -14,73 +19,79 @@ public class ClientSide {
         serverSocket = new Socket(ip, port);
         inputStream = new DataInputStream(serverSocket.getInputStream());
         outputStream = new DataOutputStream(serverSocket.getOutputStream());
-    }
 
-    void startProccess() throws Exception {
-        System.out.println("Successfully started the process");
-
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("\n\n1 to Send Message");
-        System.out.println("2 to refresh ALL Chat history");
-        System.out.println("3 to refresh Personal Chat history");
-        System.out.println("E to Exit\n");
-
-        while (true) {
-            System.out.println();
-            String choice = br.readLine();
-            if (choice.equals("E")) break;
-
-            switch (Integer.parseInt(choice)) {
-                case 1:
-                    outputStream.writeUTF("1");
-                    System.out.print("IP: ");
-                    outputStream.writeUTF(br.readLine());
-
-                    System.out.println("Message: ");
-                    outputStream.writeUTF(br.readLine());
-
-                    break;
-
-                case 2:
-                    outputStream.writeUTF("2");
-
-                    for (int i = Integer.parseInt(inputStream.readUTF()); i > 0; --i) {
-                        System.out.println("\n\nMAC ID: " + inputStream.readUTF());
-
-                        System.out.println("\n\nReceived: ");
-                        for (int j = Integer.parseInt(inputStream.readUTF()); j > 0; --j) {
-                            System.out.println(inputStream.readUTF());
-                        }
-
-                        System.out.println("\n\nSent: ");
-                        for (int j = Integer.parseInt(inputStream.readUTF()); j > 0; --j) {
-                            System.out.println(inputStream.readUTF());
-                        }
-                    }
-
-                    break;
-
-                case 3:
-                    outputStream.writeUTF("3");
-                    System.out.print("IP: ");
-                    outputStream.writeUTF(br.readLine());
-
-                    System.out.println("\n\nReceived: ");
-                    for (int i = Integer.parseInt(inputStream.readUTF()); i > 0; --i) {
-                        System.out.println(inputStream.readUTF());
-                    }
-
-                    System.out.println("\n\nSent: ");
-                    for (int i = Integer.parseInt(inputStream.readUTF()); i > 0; --i) {
-                        System.out.println(inputStream.readUTF());
-                    }
-
-                    break;
-            }
+        if (!inputStream.readUTF().equals(READY)) {
+            System.out.println("Error in Server !!! Process terminated...");
+            System.exit(1);
         }
     }
 
+    String attemptLogin(String username, String password) throws Exception {
+        String uniqueID = encrypt(username + " " + password);
+
+        outputStream.writeUTF(username);
+        outputStream.writeUTF(uniqueID);
+
+        String response = inputStream.readUTF();
+        if (response.equals(USERNAME_NOT_FOUND_CREATE)) {
+            outputStream.writeUTF(NO);
+        }
+
+        return response;
+    }
+
+    String attemptLogin(String username, String password, boolean createIfAbsent)
+            throws Exception {
+        System.out.println(username + " " + password + " " + createIfAbsent);
+
+        String uniqueID = encrypt(username + " " + password);
+
+        outputStream.writeUTF(username);
+        outputStream.writeUTF(uniqueID);
+
+        String response = inputStream.readUTF();
+        if (response.equals(USERNAME_NOT_FOUND_CREATE)) {
+            outputStream.writeUTF(createIfAbsent ? YES : NO);
+            response = inputStream.readUTF();
+        }
+
+        return response;
+    }
+
+    private String encrypt(String originalString) {
+        return originalString;
+    }
+
+    private String decrypt(String originalString) {
+        return originalString;
+    }
+
+
+
+
+
+
+    void startProcess() throws Exception {
+        System.out.println("Process started successfully...");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String response;
+
+        do {
+            System.out.print("Choice: ");
+
+            if (br.readLine().equals("1")) {
+                response = attemptLogin(br.readLine(), br.readLine());
+            } else {
+                response = attemptLogin(br.readLine(), br.readLine(), br.readLine().equals("1"));
+            }
+
+            System.out.println(response);
+        } while (!response.equals(SUCCESSFUL_LOGIN));
+
+        System.out.println("Successful login");
+    }
+
     public static void main(String[] args) throws Exception {
-        new ClientSide("13.126.21.115", 7777).startProccess();
+        new ClientSide("192.168.0.15", 7777).startProcess();
     }
 }

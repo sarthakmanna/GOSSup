@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="96ed4545-52e6-437b-a6da-a6b6c1be8832" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/ClientSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientSide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/PromisingProject$Driver.ic" NAME="Driver Coverage Results" MODIFIED="1545820881264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1786887492">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="267" />
+          <entry key="project.open.time.14" value="4" />
+          <entry key="project.open.time.15" value="5" />
+          <entry key="project.open.time.16" value="4" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.19" value="2" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.20" value="2" />
+          <entry key="project.open.time.21" value="5" />
+          <entry key="project.open.time.22" value="3" />
+          <entry key="project.open.time.23" value="9" />
+          <entry key="project.open.time.24" value="12" />
+          <entry key="project.open.time.25" value="19" />
+          <entry key="project.open.time.26" value="13" />
+          <entry key="project.open.time.27" value="14" />
+          <entry key="project.open.time.28" value="20" />
+          <entry key="project.open.time.29" value="22" />
+          <entry key="project.open.time.30" value="18" />
+          <entry key="project.open.time.31" value="14" />
+          <entry key="project.open.time.32" value="7" />
+          <entry key="project.open.time.33" value="12" />
+          <entry key="project.open.time.34" value="15" />
+          <entry key="project.open.time.35" value="9" />
+          <entry key="project.open.time.36" value="6" />
+          <entry key="project.open.time.37" value="10" />
+          <entry key="project.open.time.38" value="7" />
+          <entry key="project.open.time.39" value="6" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.40" value="2" />
+          <entry key="project.open.time.41" value="3" />
+          <entry key="project.open.time.42" value="5" />
+          <entry key="project.open.time.44" value="1" />
+          <entry key="project.open.time.45" value="3" />
+          <entry key="project.open.time.46" value="3" />
+          <entry key="project.open.time.47" value="3" />
+          <entry key="project.open.time.48" value="1" />
+          <entry key="project.open.time.50" value="2" />
+          <entry key="project.open.time.52" value="1" />
+          <entry key="project.open.time.53" value="1" />
+          <entry key="project.open.time.55" value="1" />
+          <entry key="project.open.time.56" value="1" />
+          <entry key="project.open.time.58" value="1" />
+          <entry key="project.open.time.67" value="1" />
+          <entry key="project.open.time.69" value="1" />
+          <entry key="project.open.time.74" value="1" />
+          <entry key="project.opened" value="274" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="3" />
+          <entry key="iml" value="14" />
+          <entry key="java" value="558" />
+          <entry key="txt" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="3" />
+          <entry key="IDEA_MODULE" value="18" />
+          <entry key="JAVA" value="781" />
+          <entry key="PLAIN_TEXT" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="574172" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="758885" />
+          <entry key="PLAIN_TEXT" value="98" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="PromisingProject" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1320">
+              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ServerSide.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ClientDetails.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-644">
+              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ClientSide.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1206#1207#0" expanded="true" />
+                <element signature="e#1243#1244#0" expanded="true" />
+                <element signature="e#1300#1301#0" expanded="true" />
+                <element signature="e#1337#1338#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+        <option value="Main" />
+        <option value="Matrix" />
+        <option value="Singleton" />
+        <option value="MatrixFunctions" />
+        <option value="Fraction" />
+        <option value="myArrayList" />
+        <option value="HLD_LCA" />
+        <option value="SegmentTree" />
+        <option value="Class" />
+        <option value="myTreeSet" />
+        <option value="Loaded_CP" />
+        <option value="CP" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>myHeap</find>
+      <find>26</find>
+      <find>Long.MAX</find>
+      <find>Hash</find>
+      <find>rac</find>
+      <find>target[bestRepl]</find>
+      <find>-7</find>
+      <find>Integer[]</find>
+      <find>count</find>
+      <find>new Has</find>
+      <find>HashMap&lt;Integer, Integer&gt;</find>
+      <find>HashMap&lt;&gt;</find>
+      <find>HashMap</find>
+      <find>print</find>
+      <find>min</find>
+      <find>ArrayList&lt;&gt;</find>
+      <find>ArrayList</find>
+      <find>MAXN</find>
+      <find>new</find>
+      <find>int</find>
+      <find>System.out.p</find>
+      <find>Long</find>
+      <find>depth</find>
+      <find>long</find>
+      <find>getlocalAddress</find>
+      <find>getLocalAddress</find>
+      <find>getRemoteSocketAddress</find>
+      <find>HashSet</find>
+      <find>inet</find>
+      <find>mac</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>n &gt;&gt; 1</replace>
+      <replace>words.higher(&quot;&quot;)</replace>
+      <replace>TreeMap</replace>
+      <replace>myArrayList()</replace>
+      <replace>myArrayList[</replace>
+      <replace>myArray</replace>
+      <replace>200_005</replace>
+      <replace>HashSet</replace>
+      <replace>Hash</replace>
+      <replace>BitSet</replace>
+      <replace>ArrayList</replace>
+      <replace>.X</replace>
+      <replace>myPointList</replace>
+      <replace>query[0</replace>
+      <replace>query[0]</replace>
+      <replace>long</replace>
+      <replace>size</replace>
+      <replace>LETTERS</replace>
+      <replace>Integer.MAX</replace>
+      <replace>bestStr</replace>
+      <replace>int[]</replace>
+      <replace>myHashMap</replace>
+      <replace>myArrayList</replace>
+      <replace>myPairList</replace>
+      <replace>Integer</replace>
+      <replace>height</replace>
+      <replace>int</replace>
+      <replace>TreeSet</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/DamnEasy.java" />
+        <option value="$PROJECT_DIR$/src/UFF.java" />
+        <option value="$PROJECT_DIR$/src/DB.java" />
+        <option value="$PROJECT_DIR$/src/Applet.java" />
+        <option value="$PROJECT_DIR$/src/Sorry_IHad2Switch.java" />
+        <option value="$PROJECT_DIR$/src/SorryAgain.java" />
+        <option value="$PROJECT_DIR$/src/DSU.java" />
+        <option value="$PROJECT_DIR$/src/Z.java" />
+        <option value="$PROJECT_DIR$/src/RK.java" />
+        <option value="$PROJECT_DIR$/src/MergeEm.java" />
+        <option value="$PROJECT_DIR$/src/Cmon.java" />
+        <option value="$PROJECT_DIR$/src/Cakewalk.java" />
+        <option value="$PROJECT_DIR$/src/LOL_Easy.java" />
+        <option value="$PROJECT_DIR$/src/Nice.java" />
+        <option value="$PROJECT_DIR$/src/Easy.java" />
+        <option value="$PROJECT_DIR$/src/Driver.java" />
+        <option value="$PROJECT_DIR$/src/ST.java" />
+        <option value="$PROJECT_DIR$/src/Main.kt" />
+        <option value="$PROJECT_DIR$/src/CF.java" />
+        <option value="$PROJECT_DIR$/src/Testing.java" />
+        <option value="$PROJECT_DIR$/src/SegTree.java" />
+        <option value="$PROJECT_DIR$/src/HLD.java" />
+        <option value="$PROJECT_DIR$/src/SegmentTree.java" />
+        <option value="$PROJECT_DIR$/src/Test.java" />
+        <option value="$PROJECT_DIR$/src/JAVA.java" />
+        <option value="$PROJECT_DIR$/src/BengalPartition.java" />
+        <option value="$PROJECT_DIR$/src/Checker.java" />
+        <option value="$PROJECT_DIR$/src/DP.java" />
+        <option value="$PROJECT_DIR$/src/Hull.java" />
+        <option value="$PROJECT_DIR$/src/Kosaraju.java" />
+        <option value="$PROJECT_DIR$/src/Node.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Solver.java" />
+        <option value="$PROJECT_DIR$/src/Proto.java" />
+        <option value="$PROJECT_DIR$/src/Pro.java" />
+        <option value="$PROJECT_DIR$/src/Fraction.java" />
+        <option value="$PROJECT_DIR$/src/Matrix.java" />
+        <option value="$PROJECT_DIR$/src/LOL.java" />
+        <option value="$PROJECT_DIR$/src/C.java" />
+        <option value="$PROJECT_DIR$/src/CP1.java" />
+        <option value="$PROJECT_DIR$/src/HLD_LCA.java" />
+        <option value="$PROJECT_DIR$/src/myArrayList.java" />
+        <option value="$PROJECT_DIR$/src/Solution.java" />
+        <option value="$PROJECT_DIR$/src/Assgn.java" />
+        <option value="$PROJECT_DIR$/src/myTreeSet.java" />
+        <option value="$PROJECT_DIR$/src/ServerSide.java" />
+        <option value="$PROJECT_DIR$/src/Cp.java" />
+        <option value="$PROJECT_DIR$/src/CP.java" />
+        <option value="$PROJECT_DIR$/src/ClientDetails.java" />
+        <option value="$PROJECT_DIR$/src/Server.java" />
+        <option value="$PROJECT_DIR$/src/ClientSide.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="328" />
+    <option name="y" value="27" />
+    <option name="width" value="693" />
+    <option name="height" value="555" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PromisingProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PromisingProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PromisingProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PromisingProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/sarthakmanna/IdeaProjects/PromisingProject/PromisingProject.iml&#10;de&#9;null&#9;null" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557940650048" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.ClientSide">
+    <configuration name="Assgn" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Assgn" />
+      <module name="PromisingProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CP" />
+      <module name="PromisingProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientSide" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ClientSide" />
+      <module name="PromisingProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Cp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Cp" />
+      <module name="PromisingProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerSide" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ServerSide" />
+      <module name="PromisingProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.CP" />
+      <item itemvalue="Application.Assgn" />
+      <item itemvalue="Application.ServerSide" />
+      <item itemvalue="Application.ClientSide" />
+      <item itemvalue="Application.Cp" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ClientSide" />
+        <item itemvalue="Application.ServerSide" />
+        <item itemvalue="Application.CP" />
+        <item itemvalue="Application.Cp" />
+        <item itemvalue="Application.Assgn" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="96ed4545-52e6-437b-a6da-a6b6c1be8832" name="Default Changelist" comment="" />
+      <created>1539101832589</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1539101832589</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1556808704380</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1556808704380</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial Commit">
+      <created>1557177250235</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1557177250235</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Initial Commit">
+      <created>1557178732038</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1557178732038</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added getAllIPs() and getConnectedIPs()">
+      <created>1557339653135</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1557339653135</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added getAllIPs() and getConnectedIPs()">
+      <created>1557341408279</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1557341408279</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Server.java redesigned.">
+      <created>1557937802258</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1557937802259</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Server.java redesigned.">
+      <created>1557938002711</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1557938002711</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="57" y="25" width="1309" height="743" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49597856" visible="true" weight="0.22723673" />
+      <window_info id="Structure" order="1" sideWeight="0.50402147" side_tool="true" weight="0.17181315" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.500813" side_tool="true" weight="0.19477434" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3284553" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49722883" weight="0.5252855" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4996041" weight="0.9380098" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5003959" side_tool="true" weight="0.4420881" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32952693" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32463294" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24940617" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32858273" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.3293745" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit" />
+    <MESSAGE value="Added getAllIPs() and getConnectedIPs()" />
+    <MESSAGE value="Server.java redesigned." />
+    <option name="LAST_COMMIT_MESSAGE" value="Server.java redesigned." />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Main.kt" />
+    <entry file="file://$PROJECT_DIR$/src/sly.java" />
+    <entry file="file://$PROJECT_DIR$/src/CF.java" />
+    <entry file="file://$PROJECT_DIR$/src/Testing.java" />
+    <entry file="file://$PROJECT_DIR$/src/SegTree.java" />
+    <entry file="file://$PROJECT_DIR$/src/SegmentTree.java" />
+    <entry file="file://$PROJECT_DIR$/src/HLD.java" />
+    <entry file="file://$PROJECT_DIR$/src/MF.java" />
+    <entry file="file://$PROJECT_DIR$/src/Magic.java" />
+    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/util/BitSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2115">
+          <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java" />
+    <entry file="file://$PROJECT_DIR$/src/JAVA.java" />
+    <entry file="file://$PROJECT_DIR$/src/J.java" />
+    <entry file="file://$PROJECT_DIR$/src/BengalPartition.java" />
+    <entry file="file://$PROJECT_DIR$/out/production/PromisingProject/output1.txt" />
+    <entry file="file://$PROJECT_DIR$/out/production/PromisingProject/output2.txt" />
+    <entry file="file://$PROJECT_DIR$/src/Checker.java" />
+    <entry file="file://$PROJECT_DIR$/src/DP.java" />
+    <entry file="file://$PROJECT_DIR$/src/Hull.java" />
+    <entry file="file://$PROJECT_DIR$/out/production/PromisingProject/IO.class" />
+    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/io/PrintStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="599" column="17" selection-start-line="599" selection-start-column="17" selection-end-line="599" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Kosaraju.java" />
+    <entry file="file://$PROJECT_DIR$/src/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/Proto.java" />
+    <entry file="file://$PROJECT_DIR$/src/Pro.java" />
+    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3504">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/util/Scanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2508">
+          <caret line="310" lean-forward="true" selection-start-line="310" selection-end-line="310" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/lang/Iterable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-880">
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ABC.java" />
+    <entry file="file://$PROJECT_DIR$/src/Matrix.java" />
+    <entry file="file://$PROJECT_DIR$/src/Fraction.java" />
+    <entry file="file://$PROJECT_DIR$/src/LOL.java" />
+    <entry file="file://$PROJECT_DIR$/src/Solver.java" />
+    <entry file="file://$PROJECT_DIR$/src/C.java" />
+    <entry file="file://$PROJECT_DIR$/src/CP1.java" />
+    <entry file="file://$PROJECT_DIR$/PromisingProject.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/myArrayList.java" />
+    <entry file="file://$PROJECT_DIR$/src/HLD_LCA.java" />
+    <entry file="file://$PROJECT_DIR$/src/Node.java" />
+    <entry file="file://$PROJECT_DIR$/src/Solution.java" />
+    <entry file="file://$PROJECT_DIR$/src/Assgn.java" />
+    <entry file="file://$PROJECT_DIR$/src/SocketProg.java" />
+    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/net/ServerSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="133" column="11" selection-start-line="133" selection-start-column="11" selection-end-line="133" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/myTreeSet.java" />
+    <entry file="file://$PROJECT_DIR$/src/Cp.java" />
+    <entry file="file://$PROJECT_DIR$/src/CP.java" />
+    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/net/Socket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1068">
+          <caret line="212" selection-start-line="212" selection-end-line="212" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClientDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-644">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ServerSide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClientSide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1206#1207#0" expanded="true" />
+            <element signature="e#1243#1244#0" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+            <element signature="e#1337#1338#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1320">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>PromisingProject</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

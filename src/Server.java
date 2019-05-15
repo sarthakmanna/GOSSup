@@ -27,8 +27,52 @@ public class Server extends Thread {
         outputStream = new DataOutputStream(client.getOutputStream());
 
         outputStream.writeUTF(READY);
-        // Client is asked to send the username and hash(username + password)
+        // Client is expected to send the username and hash(username + password)
+    }
 
+    final String SEND = "SN", REFRESH_ALL = "RA", REFRESH_PERSONAL = "RP",
+            BROADCAST = "BR", GET_ALL_USERNAMES = "AL", GET_ONLINE_USERNAMES = "CN";
+
+    @Override
+    public void run() {
+        try {
+            login();
+
+            ACTIVE_CLIENTS.add(clientDetails.getUsername());
+
+            while (clientSocket.isConnected()) {
+                String command = inputStream.readUTF();
+
+                if (command.equals(SEND)) {
+                    sendMessage();
+                } else if (command.equals(REFRESH_ALL)) {
+                    refreshAllChatHistory();
+                } else if (command.equals(REFRESH_PERSONAL)) {
+                    refreshPersonalChatHistory();
+                } else if (command.equals(BROADCAST)) {
+                    broadcastMessage();
+                } else if (command.equals(GET_ALL_USERNAMES)) {
+                    getAllUsernames();
+                } else if (command.equals(GET_ONLINE_USERNAMES)) {
+                    getOnlineUsernames();
+                } else {
+                    System.out.println("WRONG COMMAND: " + command);
+                }
+            }
+            System.out.println("User " + clientDetails.getUsername()
+                    + " has disconnected.");
+
+            inputStream.close();
+            outputStream.close();
+            clientSocket.close();
+        } catch (Exception e) {
+        } finally {
+            if (clientDetails != null)
+                ACTIVE_CLIENTS.remove(clientDetails.getUsername());
+        }
+    }
+
+    void login() throws Exception {
         while (true) {
             String username = inputStream.readUTF();
             // username sent by Client
@@ -62,50 +106,13 @@ public class Server extends Thread {
         }
     }
 
-    final String SEND = "SN", REFRESH_ALL = "RA", REFRESH_PERSONAL = "RP",
-            BROADCAST = "BR", GET_ALL_USERNAMES = "AL", GET_ONLINE_USERNAMES = "CN";
-
-    @Override
-    public void run() {
-        try {
-            ACTIVE_CLIENTS.add(clientDetails.getUsername());
-
-            while (clientSocket.isConnected()) {
-                String command = inputStream.readUTF();
-
-                if (command.equals(SEND)) {
-                    sendMessage();
-                } else if (command.equals(REFRESH_ALL)) {
-                    refreshAllChatHistory();
-                } else if (command.equals(REFRESH_PERSONAL)) {
-                    refreshPersonalChatHistory();
-                } else if (command.equals(BROADCAST)) {
-                    broadcastMessage();
-                } else if (command.equals(GET_ALL_USERNAMES)) {
-                    getAllUsernames();
-                } else if (command.equals(GET_ONLINE_USERNAMES)) {
-                    getOnlineUsernames();
-                } else {
-                    System.out.println("WRONG COMMAND: " + command);
-                }
-            }
-            System.out.println("User " + clientDetails.getUsername() + " has disconnected.");
-
-            inputStream.close();
-            outputStream.close();
-            clientSocket.close();
-        } catch (Exception e) {
-        } finally {
-            ACTIVE_CLIENTS.remove(clientDetails.getUsername());
-        }
-    }
-
     void sendMessage() throws Exception {
         String destUsername = inputStream.readUTF();
         Date timeStamp = new Date();
         String message = inputStream.readUTF();
 
-        ClientDetails sender = clientDetails, receiver = DATABASE.get(destUsername);
+        ClientDetails sender = clientDetails,
+                receiver = DATABASE.get(destUsername);
 
         sender.sendMessage(destUsername, timeStamp, message);
         receiver.receiveMessage(destUsername, timeStamp, message);
