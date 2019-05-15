@@ -46,7 +46,7 @@ public class Server extends Thread {
                 } else {
                     outputStream.writeUTF(WRONG_PASSWORD);
                 }
-            } else{
+            } else {
                 outputStream.writeUTF(USERNAME_NOT_FOUND_CREATE);
                 String response = inputStream.readUTF();
 
@@ -55,6 +55,8 @@ public class Server extends Thread {
                     DATABASE.put(username, newClient);
                     outputStream.writeUTF(SUCCESSFUL_LOGIN);
                     return;
+                } else if (response.equals(NO)) {
+                    outputStream.writeUTF(WRONG_PASSWORD);
                 }
             }
         }
