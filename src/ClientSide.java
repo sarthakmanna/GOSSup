@@ -81,6 +81,6 @@ public class ClientSide {
     }
 
     public static void main(String[] args) throws Exception {
-        new ClientSide("192.168.0.15", 7777).startProccess();
+        new ClientSide("13.126.21.115", 7777).startProccess();
     }
 }

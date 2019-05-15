@@ -1,51 +1,69 @@
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class ClientDetails {
-    private String MAC_id;
-    private HashMap<String, ArrayList<String>> sentMessages, receivedMessages;
+    private final String USERNAME, UNIQUEID;
+    private HashMap<String, ArrayList<Message>> CONVERSATIONS;
 
-    ClientDetails(String mac) {
-        MAC_id = mac;
-        sentMessages = new HashMap<>();
-        receivedMessages = new HashMap<>();
+    ClientDetails(String username, String uniqueID) {
+        USERNAME = username; UNIQUEID = uniqueID;
+        CONVERSATIONS = new HashMap<>();
     }
 
-    void sendMessage(String toMAC, String time, String message) {
-        message = time + "\n" + message;
-        sentMessages.putIfAbsent(toMAC, new ArrayList<>());
-        sentMessages.get(toMAC).add(message);
+    String getUsername() { return USERNAME; }
+
+    String getUniqueID() { return UNIQUEID; }
+
+    ArrayList<Message> getMessageList(String username) { return CONVERSATIONS.get(username); }
+
+    void sendMessage(String username, Date timeStamp, String message) {
+        Message sentMsg = new Message(username, timeStamp, message, Message.SENT);
+
+        CONVERSATIONS.putIfAbsent(username, new ArrayList<>());
+        CONVERSATIONS.get(username).add(sentMsg);
     }
 
-    void receiveMessage(String fromMAC, String time, String message) {
-        message = time + "\n" + message;
-        receivedMessages.putIfAbsent(fromMAC, new ArrayList<>());
-        receivedMessages.get(fromMAC).add(message);
-    }
+    void receiveMessage(String username, Date timeStamp, String message) {
+        Message receivedMsg = new Message(username, timeStamp, message, Message.RECEIVED);
 
-    String getMAC_id() { return MAC_id; }
-
-    ArrayList<String> getSentMessages(String toMAC) {
-        return sentMessages.getOrDefault(toMAC, new ArrayList<>());
-    }
-
-    ArrayList<String> getReceivedMessages(String fromMAC) {
-        return receivedMessages.getOrDefault(fromMAC, new ArrayList<>());
-    }
-
-    HashSet<String> getAllMAC_IDs() {
-        HashSet<String> allMACs = new HashSet<>();
-        allMACs.addAll(receivedMessages.keySet());
-        allMACs.addAll(sentMessages.keySet());
-        return allMACs;
+        CONVERSATIONS.putIfAbsent(username, new ArrayList<>());
+        CONVERSATIONS.get(username).add(receivedMsg);
     }
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("MAC = ").append(MAC_id).append("\n");
-        sb.append("SENT = ").append(sentMessages).append("\n");
-        sb.append("RECEIVED = ").append(receivedMessages).append("\n");
-        return sb.toString();
+        sb.append("Viewing details of user: ").append(USERNAME).append("\n");
+        sb.append("Unique ID: ").append(UNIQUEID).append("\n");
+        sb.append("Conversations: ").append("\n");
+        for (String user : CONVERSATIONS.keySet()) {
+            sb.append(user).append("\n");
+            sb.append(CONVERSATIONS.get(user));
+            sb.append("\n\n");
+        }
+        return "{" + sb + "}";
+    }
+}
+
+class Message {
+    static final boolean SENT = true, RECEIVED = false;
+
+    String userInvolved, timeStamp, message;
+    boolean isSent;
+
+    Message(String username, Date time, String msg, boolean flag) {
+        userInvolved = username;
+        timeStamp = ServerSide.DATE_FORMAT.format(time);
+        message = msg;
+        isSent = flag;
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(isSent ? "Sent" : "Received").append("\n");
+        sb.append("User involved: ").append(userInvolved).append("\n");
+        sb.append("Time: ").append(timeStamp).append("\n");
+        sb.append("Message: ").append(message).append("\n");
+        return "[" + sb + "]";
     }
 }
