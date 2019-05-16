@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96ed4545-52e6-437b-a6da-a6b6c1be8832" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ClientSide/GUI_Interface/BackgroundUpdate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClientSide/GUI_Interface/Client_GUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClientSide/GUI_Interface/Login_GUI.java" afterDir="false" />
+    <list default="true" id="96ed4545-52e6-437b-a6da-a6b6c1be8832" name="Default Changelist" comment="Added GUI interfaces">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientSide/ClientAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientSide/ClientAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientSide/GUI_Interface/BackgroundUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientSide/GUI_Interface/BackgroundUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientSide/GUI_Interface/Client_GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientSide/GUI_Interface/Client_GUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -110,8 +108,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4504" />
-          <entry key="PLAIN_TEXT" value="445" />
+          <entry key="JAVA" value="4530" />
+          <entry key="PLAIN_TEXT" value="465" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -166,13 +164,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ClientSide/GUI_Interface/Client_GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="156">
+              <caret line="321" lean-forward="true" selection-start-line="321" selection-end-line="321" />
               <folding>
                 <element signature="e#0#17238#0" expanded="true" />
+                <element signature="imports" expanded="true" />
                 <element signature="e#827#857#0" expanded="true" />
                 <element signature="e#862#951#0" expanded="true" />
                 <element signature="e#2161#2162#0" expanded="true" />
@@ -197,18 +196,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClientSide/GUI_Interface/Login_GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+            <state relative-caret-position="-264">
+              <caret line="60" column="11" lean-forward="true" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
               <folding>
                 <element signature="e#0#9813#0" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="e#422#423#0" expanded="true" />
                 <element signature="e#454#455#0" expanded="true" />
                 <element signature="e#671#701#0" expanded="true" />
-                <element signature="e#706#795#0" expanded="true" />
                 <element signature="e#1472#1473#0" expanded="true" />
                 <element signature="e#1534#1535#0" expanded="true" />
                 <element signature="e#1696#1697#0" expanded="true" />
@@ -224,8 +222,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClientSide/GUI_Interface/BackgroundUpdate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="2486">
+              <caret line="113" column="41" selection-start-line="113" selection-start-column="41" selection-end-line="113" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -395,7 +393,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Main.kt" />
         <option value="$PROJECT_DIR$/src/CF.java" />
         <option value="$PROJECT_DIR$/src/Testing.java" />
         <option value="$PROJECT_DIR$/src/SegTree.java" />
@@ -444,8 +441,9 @@
         <option value="$PROJECT_DIR$/src/ClientSide/Client_GUI.java" />
         <option value="$PROJECT_DIR$/src/ClientSide/BackgroundUpdate.java" />
         <option value="$PROJECT_DIR$/src/ClientSide/Login_GUI.java" />
-        <option value="$PROJECT_DIR$/src/ClientSide/GUI_Interface/Client_GUI.java" />
         <option value="$PROJECT_DIR$/src/ClientSide/GUI_Interface/Login_GUI.java" />
+        <option value="$PROJECT_DIR$/src/ClientSide/GUI_Interface/BackgroundUpdate.java" />
+        <option value="$PROJECT_DIR$/src/ClientSide/GUI_Interface/Client_GUI.java" />
       </list>
     </option>
   </component>
@@ -524,7 +522,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/sarthakmanna/IdeaProjects/PromisingProject/PromisingProject.iml&#10;de&#9;null&#9;null" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558030464993" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558032051531" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -746,13 +744,20 @@
       <option name="project" value="LOCAL" />
       <updated>1558019648073</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added GUI interfaces">
+      <created>1558030630313</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1558030630313</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="25" width="1309" height="743" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49597856" visible="true" weight="0.23515439" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49597856" visible="true" weight="0.23515439" />
       <window_info id="Structure" order="1" sideWeight="0.50402147" side_tool="true" weight="0.17181315" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -761,7 +766,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.500813" side_tool="true" weight="0.19477434" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32626426" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49722883" weight="0.5252855" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49722883" visible="true" weight="0.5252855" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -836,7 +841,8 @@
     <MESSAGE value="bug fix" />
     <MESSAGE value="more bug fixes" />
     <MESSAGE value="all API methods synchronized" />
-    <option name="LAST_COMMIT_MESSAGE" value="all API methods synchronized" />
+    <MESSAGE value="Added GUI interfaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added GUI interfaces" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1046,10 +1052,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClientSide/GUI_Interface/Login_GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-264">
+          <caret line="60" column="11" lean-forward="true" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#9813#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#671#701#0" expanded="true" />
+            <element signature="e#1472#1473#0" expanded="true" />
+            <element signature="e#1534#1535#0" expanded="true" />
+            <element signature="e#1696#1697#0" expanded="true" />
+            <element signature="e#1758#1759#0" expanded="true" />
+            <element signature="e#1953#1954#0" expanded="true" />
+            <element signature="e#2013#2014#0" expanded="true" />
+            <element signature="e#7840#7927#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ClientSide/GUI_Interface/BackgroundUpdate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="2486">
+          <caret line="113" column="41" selection-start-line="113" selection-start-column="41" selection-end-line="113" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1058,10 +1085,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ClientSide/GUI_Interface/Client_GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="156">
+          <caret line="321" lean-forward="true" selection-start-line="321" selection-end-line="321" />
           <folding>
             <element signature="e#0#17238#0" expanded="true" />
+            <element signature="imports" expanded="true" />
             <element signature="e#827#857#0" expanded="true" />
             <element signature="e#862#951#0" expanded="true" />
             <element signature="e#2161#2162#0" expanded="true" />
@@ -1081,28 +1109,6 @@
             <element signature="e#4495#4496#0" expanded="true" />
             <element signature="e#4556#4557#0" expanded="true" />
             <element signature="e#14181#14268#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClientSide/GUI_Interface/Login_GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#9813#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#671#701#0" expanded="true" />
-            <element signature="e#706#795#0" expanded="true" />
-            <element signature="e#1472#1473#0" expanded="true" />
-            <element signature="e#1534#1535#0" expanded="true" />
-            <element signature="e#1696#1697#0" expanded="true" />
-            <element signature="e#1758#1759#0" expanded="true" />
-            <element signature="e#1953#1954#0" expanded="true" />
-            <element signature="e#2013#2014#0" expanded="true" />
-            <element signature="e#7840#7927#0" expanded="true" />
           </folding>
         </state>
       </provider>

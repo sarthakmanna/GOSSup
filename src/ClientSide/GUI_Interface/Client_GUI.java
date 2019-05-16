@@ -129,7 +129,7 @@ public class Client_GUI extends javax.swing.JFrame {
 
         cbAutoScroll.setText("Auto Scroll");
 
-        lbSelf.setText("You:");
+        lbSelf.setText("You: ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -320,7 +320,7 @@ public class Client_GUI extends javax.swing.JFrame {
                     new BackgroundUpdate(cbOnline, cbAll, cbFriends,
                             tfSelected, taChat, cbAutoScroll, CLIENT_API).start();
 
-                    lbSelf.setText("YOU: " + selfUsername);
+                    lbSelf.setText("You are \'" + selfUsername + "\'");
 
                     setLocationRelativeTo(null);
                     setVisible(true);

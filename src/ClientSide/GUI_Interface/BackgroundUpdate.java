@@ -114,7 +114,7 @@ public class BackgroundUpdate extends Thread {
                     tfSelected.getText())));
 
             if (cbAutoScroll.isSelected()) {
-                taChat.setCaretPosition(taChat.getDocument().getLength() - 1);
+                taChat.setCaretPosition(taChat.getDocument().getLength());
             }
         }
     }
