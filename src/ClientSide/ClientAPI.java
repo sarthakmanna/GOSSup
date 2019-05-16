@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ClientAPI {
-    public static final String STATIC_SERVER_IP = "13.127.194.179";
+    public static final String STATIC_SERVER_IP = "192.168.0.15"; //13.127.194.179";
     public static final int PORT = 7777;
 
     public static final String READY = "RD", SUCCESSFUL_LOGIN = "LG",
@@ -37,6 +37,8 @@ public class ClientAPI {
     }
 
     public String attemptLogin(String username, String password) throws Exception {
+        System.out.println(username + " " + password);
+
         String uniqueID = encrypt(username + " " + password);
 
         outputStream.writeUTF(username);

@@ -42,7 +42,6 @@ public class Server extends Thread {
     public void run() {
         try {
             login();
-
             ACTIVE_CLIENTS.add(clientDetails.getUsername());
 
             while (clientSocket.isConnected()) {
@@ -69,6 +68,7 @@ public class Server extends Thread {
             outputStream.close();
             clientSocket.close();
         } catch (Exception e) {
+            System.out.println("Error occurred !!!");
         } finally {
             if (clientDetails != null) {
                 clientDetails.setLastSeenTime(new Date().getTime());
@@ -101,8 +101,8 @@ public class Server extends Thread {
                 String response = inputStream.readUTF();
 
                 if (response.equals(YES)) {
-                    ClientDetails newClient = new ClientDetails(username, uniqueid);
-                    DATABASE.put(username, newClient);
+                    clientDetails = new ClientDetails(username, uniqueid);
+                    DATABASE.put(username, clientDetails);
                     outputStream.writeUTF(SUCCESSFUL_LOGIN);
                     return;
                 } else if (response.equals(NO)) {
