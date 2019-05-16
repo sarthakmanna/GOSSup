@@ -23,9 +23,12 @@ public class ClientDetails {
 
     public boolean hasChattedBefore(String username) { return CONVERSATIONS.containsKey(username); }
 
-    public ArrayList<String> getFriends() { return new ArrayList<>(CONVERSATIONS.keySet()); }
+    public ArrayList<String> getFriends() {
+        return new ArrayList<>(CONVERSATIONS.keySet()); }
 
-    public ArrayList<MessageDetails> getMessageList(String username) { return CONVERSATIONS.get(username); }
+    public ArrayList<MessageDetails> getMessageList(String username) {
+        return CONVERSATIONS.getOrDefault(username, new ArrayList<>());
+    }
 
     public void sendMessage(String username, long timeStamp, String message) {
         MessageDetails sentMsg = new MessageDetails(username, timeStamp, message, MessageDetails.SENT);

@@ -122,8 +122,8 @@ public class Server extends Thread {
         ClientDetails sender = clientDetails,
                 receiver = DATABASE.get(destUsername);
 
-        sender.sendMessage(destUsername, timeStamp, message);
-        receiver.receiveMessage(destUsername, timeStamp, message);
+        sender.sendMessage(receiver.getUsername(), timeStamp, message);
+        receiver.receiveMessage(sender.getUsername(), timeStamp, message);
     }
 
     public void refreshPersonalChatHistory() throws Exception {
@@ -142,9 +142,9 @@ public class Server extends Thread {
     }
 
     public void refreshAllChatHistory() throws Exception {
-        outputStream.writeUTF(DATABASE.size() + "");
+        outputStream.writeUTF(clientDetails.getFriends().size() + "");
 
-        for (String withUsername : DATABASE.keySet()) {
+        for (String withUsername : clientDetails.getFriends()) {
             outputStream.writeUTF(withUsername);
 
             ArrayList<MessageDetails> messageList = clientDetails.getMessageList(withUsername);
@@ -168,8 +168,8 @@ public class Server extends Thread {
             ClientDetails sender = clientDetails,
                     receiver = DATABASE.get(destUsername);
 
-            sender.sendMessage(destUsername, timeStamp, message);
-            receiver.receiveMessage(destUsername, timeStamp, message);
+            sender.sendMessage(receiver.getUsername(), timeStamp, message);
+            receiver.receiveMessage(sender.getUsername(), timeStamp, message);
         }
     }
 

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ClientAPI {
-    public static final String STATIC_SERVER_IP = "192.168.0.15"; //13.127.194.179";
+    public static final String STATIC_SERVER_IP = "192.168.0.15"; //*/"13.127.194.179";
     public static final int PORT = 7777;
 
     public static final String READY = "RD", SUCCESSFUL_LOGIN = "LG",
@@ -110,7 +110,7 @@ public class ClientAPI {
             ArrayList<Message> chats = new ArrayList<>();
 
             int messageCount = Integer.parseInt(inputStream.readUTF().trim());
-            for (j = 0; j < messageCount; ++i) {
+            for (j = 0; j < messageCount; ++j) {
                 Message message = new Message(inputStream.readUTF(), inputStream.readUTF(),
                         inputStream.readUTF(), inputStream.readUTF());
                 chats.add(message);
