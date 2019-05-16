@@ -118,7 +118,7 @@ public class ClientAPI {
         return fullChatHistory;
     }
 
-    public ArrayList<User> getRecent() throws Exception {
+    public ArrayList<User> getRecentUsers() throws Exception {
         outputStream.writeUTF(GET_RECENT_USERS);
 
         ArrayList<User> users = new ArrayList<>();
@@ -133,7 +133,7 @@ public class ClientAPI {
         return users;
     }
 
-    public ArrayList<User> getAllUsernames() throws Exception {
+    public ArrayList<User> getAllUsers() throws Exception {
         outputStream.writeUTF(GET_ALL_USERS);
 
         ArrayList<User> users = new ArrayList<>();
@@ -148,7 +148,7 @@ public class ClientAPI {
         return users;
     }
 
-    public ArrayList<User> getOnlineUsernames() throws Exception {
+    public ArrayList<User> getOnlineUsers() throws Exception {
         outputStream.writeUTF(GET_ONLINE_USERS);
 
         ArrayList<User> users = new ArrayList<>();
