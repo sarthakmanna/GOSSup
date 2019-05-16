@@ -3,12 +3,15 @@ package ClientSide;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ClientAPI {
     public static final String STATIC_SERVER_IP = /*"192.168.0.15"; //*/"13.127.194.179";
     public static final int PORT = 7777;
+
+    public final static SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 
     public static final String READY = "RD", SUCCESSFUL_LOGIN = "LG",
             WRONG_PASSWORD = "WP", USERNAME_NOT_FOUND_CREATE = "NF",
