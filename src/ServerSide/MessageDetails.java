@@ -38,4 +38,13 @@ public class MessageDetails {
     public boolean isSent() {
         return isSent;
     }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("User involved: ").append(userInvolved).append("\n");
+        sb.append("Time stamp: ").append(timeStamp).append("\n");
+        sb.append("Message: ").append(message).append("\n");
+        sb.append("isSent: ").append(isSent).append("\n");
+        return "(" + sb + ")";
+    }
 }

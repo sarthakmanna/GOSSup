@@ -17,13 +17,9 @@ public class ClientDetails {
 
     public String getUniqueID() { return UNIQUEID; }
 
-    public long getLastSeenTime() {
-        return lastSeenTime;
-    }
+    public long getLastSeenTime() { return lastSeenTime; }
 
-    public void setLastSeenTime(long lastSeenTime) {
-        this.lastSeenTime = lastSeenTime;
-    }
+    public void setLastSeenTime(long lastSeenTime) { this.lastSeenTime = lastSeenTime; }
 
     public boolean hasChattedBefore(String username) { return CONVERSATIONS.containsKey(username); }
 

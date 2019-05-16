@@ -33,4 +33,12 @@ public class User {
     public void setHAS_CHATTED_BEFORE(boolean HAS_CHATTED_BEFORE) {
         this.HAS_CHATTED_BEFORE = HAS_CHATTED_BEFORE;
     }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Username: ").append(USERNAME).append("\n");
+        sb.append("Status: ").append(STATUS).append("\n");
+        sb.append("HasChattedBefore: ").append(HAS_CHATTED_BEFORE).append("\n");
+        return "{" + sb + "}";
+    }
 }
