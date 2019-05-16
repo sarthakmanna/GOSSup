@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96ed4545-52e6-437b-a6da-a6b6c1be8832" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ServerSide/MessageDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PromisingProject/ServerSide.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PromisingProject/ServerSide.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerSide/ClientDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientSide/ClientAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientSide/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MessageDetails.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerSide/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServerSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerSide/ServerMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientSide/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientSide/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientSide/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientSide/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientSide/User.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -115,8 +108,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2162" />
-          <entry key="PLAIN_TEXT" value="72" />
+          <entry key="JAVA" value="2222" />
+          <entry key="PLAIN_TEXT" value="89" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -182,11 +175,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClientSide/ClientAPI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="198">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -197,17 +190,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClientSide/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="154">
+              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ClientSide/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="264">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -308,7 +301,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/RK.java" />
         <option value="$PROJECT_DIR$/src/MergeEm.java" />
         <option value="$PROJECT_DIR$/src/Cmon.java" />
         <option value="$PROJECT_DIR$/src/Cakewalk.java" />
@@ -356,9 +348,10 @@
         <option value="$PROJECT_DIR$/src/ClientDetails.java" />
         <option value="$PROJECT_DIR$/src/MessageDetails.java" />
         <option value="$PROJECT_DIR$/src/ServerSide/MessageDetails.java" />
-        <option value="$PROJECT_DIR$/src/ClientSide/User.java" />
         <option value="$PROJECT_DIR$/src/ServerSide/ServerMain.java" />
         <option value="$PROJECT_DIR$/src/ClientSide/ClientAPI.java" />
+        <option value="$PROJECT_DIR$/src/ClientSide/Message.java" />
+        <option value="$PROJECT_DIR$/src/ClientSide/User.java" />
       </list>
     </option>
   </component>
@@ -430,7 +423,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/sarthakmanna/IdeaProjects/PromisingProject/PromisingProject.iml&#10;de&#9;null&#9;null" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557995593970" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557996244927" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -584,7 +577,21 @@
       <option name="project" value="LOCAL" />
       <updated>1557960761516</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added RECENT, ACTIVE, ALL types of users API">
+      <created>1557995586606</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1557995586606</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fixed small typos">
+      <created>1557995715570</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1557995715570</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -639,7 +646,8 @@
     <MESSAGE value="Server.java redesigned." />
     <MESSAGE value="Added function signatures..." />
     <MESSAGE value="Added RECENT, ACTIVE, ALL types of users API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added RECENT, ACTIVE, ALL types of users API" />
+    <MESSAGE value="Fixed small typos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed small typos" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -744,13 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClientSide/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ServerSide/ClientDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -796,20 +797,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClientSide/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ClientSide/ClientAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="198">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClientSide/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClientSide/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>
