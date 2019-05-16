@@ -77,7 +77,7 @@ public class Server extends Thread {
         }
     }
 
-    private void login() throws Exception {
+    private synchronized void login() throws Exception {
         while (true) {
             String username = inputStream.readUTF();
             // username sent by Client
@@ -114,7 +114,7 @@ public class Server extends Thread {
         }
     }
 
-    public void sendMessage() throws Exception {
+    public synchronized void sendMessage() throws Exception {
         String destUsername = inputStream.readUTF();
         long timeStamp = new Date().getTime();
         String message = inputStream.readUTF();
@@ -126,7 +126,7 @@ public class Server extends Thread {
         receiver.receiveMessage(sender.getUsername(), timeStamp, message);
     }
 
-    public void refreshPersonalChatHistory() throws Exception {
+    public synchronized void refreshPersonalChatHistory() throws Exception {
         String withUsername = inputStream.readUTF();
 
         ArrayList<MessageDetails> messageList = clientDetails.getMessageList(withUsername);
@@ -141,7 +141,7 @@ public class Server extends Thread {
         }
     }
 
-    public void refreshAllChatHistory() throws Exception {
+    public synchronized void refreshAllChatHistory() throws Exception {
         outputStream.writeUTF(clientDetails.getFriends().size() + "");
 
         for (String withUsername : clientDetails.getFriends()) {
@@ -160,7 +160,7 @@ public class Server extends Thread {
         }
     }
 
-    public void broadcastMessage() throws Exception {
+    public synchronized void broadcastMessage() throws Exception {
         long timeStamp = new Date().getTime();
         String message = inputStream.readUTF();
 
@@ -173,7 +173,7 @@ public class Server extends Thread {
         }
     }
 
-    public void getAllUsers() throws Exception {
+    public synchronized void getAllUsers() throws Exception {
         outputStream.writeUTF(DATABASE.size() + "");
 
         for (String user : DATABASE.keySet()) {
@@ -187,7 +187,7 @@ public class Server extends Thread {
         }
     }
 
-    public void getOnlineUsers() throws Exception {
+    public synchronized void getOnlineUsers() throws Exception {
         outputStream.writeUTF(ACTIVE_CLIENTS.size() + "");
 
         for (String user : ACTIVE_CLIENTS) {
@@ -201,7 +201,7 @@ public class Server extends Thread {
         }
     }
 
-    public void getRecentUsers() throws Exception {
+    public synchronized void getRecentUsers() throws Exception {
         ArrayList<String> recentUsers = clientDetails.getFriends();
         outputStream.writeUTF(recentUsers.size() + "");
 
@@ -216,7 +216,7 @@ public class Server extends Thread {
         }
     }
 
-    public void getAllUsernames() throws Exception {
+    public synchronized void getAllUsernames() throws Exception {
         outputStream.writeUTF(DATABASE.size() + "");
 
         for (String user : DATABASE.keySet()) {
@@ -224,7 +224,7 @@ public class Server extends Thread {
         }
     }
 
-    public void getOnlineUsernames() throws Exception {
+    public synchronized void getOnlineUsernames() throws Exception {
         outputStream.writeUTF(ACTIVE_CLIENTS.size() + "");
 
         for (String user : ACTIVE_CLIENTS) {
@@ -232,7 +232,7 @@ public class Server extends Thread {
         }
     }
 
-    public void getRecentUsernames() throws Exception {
+    public synchronized void getRecentUsernames() throws Exception {
         ArrayList<String> recentUsers = clientDetails.getFriends();
         outputStream.writeUTF(recentUsers.size() + "");
 
