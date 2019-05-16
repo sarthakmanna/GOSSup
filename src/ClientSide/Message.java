@@ -1,3 +1,5 @@
+package ClientSide;
+
 public class Message {
     String userInvolved, message;
     long timeStamp;
@@ -7,6 +9,6 @@ public class Message {
         userInvolved = username;
         timeStamp = Long.parseLong(time);
         message = msg;
-        isSent = isSendType.equals(ClientSide.YES);
+        isSent = isSendType.equals(ClientAPI.YES);
     }
 }

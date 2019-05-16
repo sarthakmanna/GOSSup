@@ -1,36 +1,41 @@
+package ClientSide;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class ClientSide {
-    static final String READY = "RD", SUCCESSFUL_LOGIN = "LG",
+public class ClientAPI {
+    public static final String STATIC_SERVER_IP = "13.157.194.179";
+    public static final int PORT = 7777;
+
+    public static final String READY = "RD", SUCCESSFUL_LOGIN = "LG",
             WRONG_PASSWORD = "WP", USERNAME_NOT_FOUND_CREATE = "NF",
             YES = "Y", NO = "N";
 
-    static final String SEND = "SN", REFRESH_ALL = "RA", REFRESH_PERSONAL = "RP",
+    public static final String SEND = "SN", REFRESH_ALL = "RA", REFRESH_PERSONAL = "RP",
             BROADCAST = "BR", GET_ALL_USERS = "AL", GET_ONLINE_USERS = "CN",
             GET_RECENT_USERS = "GF";
 
 
-    Socket serverSocket;
+    private Socket serverSocket;
 
-    DataInputStream inputStream;
-    DataOutputStream outputStream;
+    private DataInputStream inputStream;
+    private DataOutputStream outputStream;
 
-    ClientSide(String ip, int port) throws Exception {
-        serverSocket = new Socket(ip, port);
+    public ClientAPI() throws Exception {
+        serverSocket = new Socket(STATIC_SERVER_IP, PORT);
         inputStream = new DataInputStream(serverSocket.getInputStream());
         outputStream = new DataOutputStream(serverSocket.getOutputStream());
 
         if (!inputStream.readUTF().equals(READY)) {
-            System.out.println("Error in Server !!! Process terminated...");
+            System.out.println("Error in ServerSide.Server !!! Process terminated...");
             System.exit(1);
         }
     }
 
-    String attemptLogin(String username, String password) throws Exception {
+    public String attemptLogin(String username, String password) throws Exception {
         String uniqueID = encrypt(username + " " + password);
 
         outputStream.writeUTF(username);
@@ -46,7 +51,7 @@ public class ClientSide {
         return response;
     }
 
-    String attemptLogin(String username, String password, boolean createIfAbsent)
+    public String attemptLogin(String username, String password, boolean createIfAbsent)
             throws Exception {
         System.out.println(username + " " + password + " " + createIfAbsent);
 
@@ -64,18 +69,18 @@ public class ClientSide {
         return response;
     }
 
-    void sendMessage(String toUser, String message) throws Exception {
+    public void sendMessage(String toUser, String message) throws Exception {
         outputStream.writeUTF(SEND);
         outputStream.writeUTF(toUser);
         outputStream.writeUTF(message);
     }
 
-    void broadCastMessage(String message) throws Exception {
+    public void broadCastMessage(String message) throws Exception {
         outputStream.writeUTF(BROADCAST);
         outputStream.writeUTF(message);
     }
 
-    ArrayList<Message> refreshPersonalChatHistory(String username) throws Exception {
+    public ArrayList<Message> refreshPersonalChatHistory(String username) throws Exception {
         outputStream.writeUTF(REFRESH_PERSONAL);
         outputStream.writeUTF(username);
 
@@ -91,7 +96,7 @@ public class ClientSide {
         return personalInbox;
     }
 
-    HashMap<String, ArrayList<Message>> refreshAllChatHistory() throws Exception {
+    public HashMap<String, ArrayList<Message>> refreshAllChatHistory() throws Exception {
         outputStream.writeUTF(REFRESH_ALL);
 
         HashMap<String, ArrayList<Message>> fullChatHistory = new HashMap<>();
@@ -113,7 +118,7 @@ public class ClientSide {
         return fullChatHistory;
     }
 
-    ArrayList<User> getRecent() throws Exception {
+    public ArrayList<User> getRecent() throws Exception {
         outputStream.writeUTF(GET_RECENT_USERS);
 
         ArrayList<User> users = new ArrayList<>();
@@ -128,7 +133,7 @@ public class ClientSide {
         return users;
     }
 
-    ArrayList<User> getAllUsernames() throws Exception {
+    public ArrayList<User> getAllUsernames() throws Exception {
         outputStream.writeUTF(GET_ALL_USERS);
 
         ArrayList<User> users = new ArrayList<>();
@@ -143,7 +148,7 @@ public class ClientSide {
         return users;
     }
 
-    ArrayList<User> getOnlineUsernames() throws Exception {
+    public ArrayList<User> getOnlineUsernames() throws Exception {
         outputStream.writeUTF(GET_ONLINE_USERS);
 
         ArrayList<User> users = new ArrayList<>();
