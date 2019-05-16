@@ -16,7 +16,8 @@ public class ClientAPI {
 
     public static final String SEND = "SN", REFRESH_ALL = "RA", REFRESH_PERSONAL = "RP",
             BROADCAST = "BR", GET_ALL_USERS = "AL", GET_ONLINE_USERS = "CN",
-            GET_RECENT_USERS = "GF";
+            GET_RECENT_USERS = "RE", GET_ALL_USERNAMES = "AU",
+            GET_ONLINE_USERNAMES = "OU", GET_RECENT_USERNAMES = "RU";
 
 
     private Socket serverSocket;
@@ -118,7 +119,7 @@ public class ClientAPI {
         return fullChatHistory;
     }
 
-    public ArrayList<User> getRecentUsers() throws Exception {
+    public ArrayList<User> getRecentUserDetails() throws Exception {
         outputStream.writeUTF(GET_RECENT_USERS);
 
         ArrayList<User> users = new ArrayList<>();
@@ -133,7 +134,7 @@ public class ClientAPI {
         return users;
     }
 
-    public ArrayList<User> getAllUsers() throws Exception {
+    public ArrayList<User> getAllUserDetails() throws Exception {
         outputStream.writeUTF(GET_ALL_USERS);
 
         ArrayList<User> users = new ArrayList<>();
@@ -148,7 +149,7 @@ public class ClientAPI {
         return users;
     }
 
-    public ArrayList<User> getOnlineUsers() throws Exception {
+    public ArrayList<User> getOnlineUserDetails() throws Exception {
         outputStream.writeUTF(GET_ONLINE_USERS);
 
         ArrayList<User> users = new ArrayList<>();
@@ -158,6 +159,45 @@ public class ClientAPI {
             User user = new User(inputStream.readUTF(),
                     inputStream.readUTF(), inputStream.readUTF());
             users.add(user);
+        }
+
+        return users;
+    }
+
+    public ArrayList<String> getRecentUsernames() throws Exception {
+        outputStream.writeUTF(GET_RECENT_USERNAMES);
+
+        ArrayList<String> users = new ArrayList<>();
+        int i, userCount = Integer.parseInt(inputStream.readUTF());
+
+        for (i = 0; i < userCount; ++i) {
+            users.add(inputStream.readUTF());
+        }
+
+        return users;
+    }
+
+    public ArrayList<String> getAllUsernames() throws Exception {
+        outputStream.writeUTF(GET_ALL_USERNAMES);
+
+        ArrayList<String> users = new ArrayList<>();
+        int i, userCount = Integer.parseInt(inputStream.readUTF());
+
+        for (i = 0; i < userCount; ++i) {
+            users.add(inputStream.readUTF());
+        }
+
+        return users;
+    }
+
+    public ArrayList<String> getOnlineUsernames() throws Exception {
+        outputStream.writeUTF(GET_ONLINE_USERNAMES);
+
+        ArrayList<String> users = new ArrayList<>();
+        int i, userCount = Integer.parseInt(inputStream.readUTF());
+
+        for (i = 0; i < userCount; ++i) {
+            users.add(inputStream.readUTF());
         }
 
         return users;

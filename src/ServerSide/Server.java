@@ -12,13 +12,14 @@ public class Server extends Thread {
     static final HashSet<String> ACTIVE_CLIENTS = new HashSet<>();
     static final HashMap<String, ClientDetails> DATABASE = new HashMap<>();
 
-    private final String READY = "RD", SUCCESSFUL_LOGIN = "LG",
+    public static final String READY = "RD", SUCCESSFUL_LOGIN = "LG",
             WRONG_PASSWORD = "WP", USERNAME_NOT_FOUND_CREATE = "NF",
             YES = "Y", NO = "N";
 
-    private final String SEND = "SN", REFRESH_ALL = "RA", REFRESH_PERSONAL = "RP",
+    public static final String SEND = "SN", REFRESH_ALL = "RA", REFRESH_PERSONAL = "RP",
             BROADCAST = "BR", GET_ALL_USERS = "AL", GET_ONLINE_USERS = "CN",
-            GET_RECENT_USERS = "GF";
+            GET_RECENT_USERS = "RE", GET_ALL_USERNAMES = "AU",
+            GET_ONLINE_USERNAMES = "OU", GET_RECENT_USERNAMES = "RU";
 
 
     private Socket clientSocket;
@@ -55,6 +56,9 @@ public class Server extends Thread {
                     case GET_ALL_USERS: getAllUsers(); break;
                     case GET_ONLINE_USERS: getOnlineUsers(); break;
                     case GET_RECENT_USERS: getRecentUsers(); break;
+                    case GET_ALL_USERNAMES: getAllUsernames(); break;
+                    case GET_ONLINE_USERNAMES: getOnlineUsernames(); break;
+                    case GET_RECENT_USERNAMES: getRecentUsernames(); break;
                     default: System.out.println("WRONG COMMAND: " + command);
                 }
             }
@@ -209,6 +213,31 @@ public class Server extends Thread {
                     userDetails.getLastSeenTime() + "");
             outputStream.writeUTF(clientDetails.hasChattedBefore(user) ?
                     YES : NO);
+        }
+    }
+
+    public void getAllUsernames() throws Exception {
+        outputStream.writeUTF(DATABASE.size() + "");
+
+        for (String user : DATABASE.keySet()) {
+            outputStream.writeUTF(user);
+        }
+    }
+
+    public void getOnlineUsernames() throws Exception {
+        outputStream.writeUTF(ACTIVE_CLIENTS.size() + "");
+
+        for (String user : ACTIVE_CLIENTS) {
+            outputStream.writeUTF(user);
+        }
+    }
+
+    public void getRecentUsernames() throws Exception {
+        ArrayList<String> recentUsers = clientDetails.getFriends();
+        outputStream.writeUTF(recentUsers.size() + "");
+
+        for (String user : recentUsers) {
+            outputStream.writeUTF(user);
         }
     }
 }
