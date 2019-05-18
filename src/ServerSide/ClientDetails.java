@@ -80,7 +80,7 @@ public class ClientDetails {
         ArrayList<MessageDetails> messagesAfterTime = new ArrayList<>();
 
         for (int i = allMessages.size() - 1; i >= 0; --i) {
-            if (allMessages.get(i).getTimeStamp() >= time) {
+            if (allMessages.get(i).getTimeStamp() > time) {
                 messagesAfterTime.add(allMessages.get(i));
             } else {
                 break;

@@ -3,10 +3,7 @@ package ServerSide;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.*;
 
 public class Server extends Thread {
     static final HashSet<String> ACTIVE_CLIENTS = new HashSet<>();
@@ -276,6 +273,15 @@ public class Server extends Thread {
 
         ArrayList<MessageDetails> messageList =
                 clientDetails.getMessageAfterTime(username, time);
+        messageList.sort(new Comparator<MessageDetails>() {
+            @Override
+            public int compare(MessageDetails o1, MessageDetails o2) {
+                if(o1.getTimeStamp()<o2.getTimeStamp())
+                    return -1;
+                else
+                return 1;
+            }
+        });
 
         outputStream.writeUTF(messageList.size() + "");
 

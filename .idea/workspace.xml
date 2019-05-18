@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="96ed4545-52e6-437b-a6da-a6b6c1be8832" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientSide/API_Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientSide/API_Tester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ServerSide/ClientDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerSide/ClientDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ServerSide/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerSide/Server.java" afterDir="false" />
     </list>
@@ -17,121 +16,56 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/PromisingProject$Driver.ic" NAME="Driver Coverage Results" MODIFIED="1545820881264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1786887492">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="267" />
-          <entry key="project.open.time.14" value="4" />
-          <entry key="project.open.time.15" value="5" />
-          <entry key="project.open.time.16" value="4" />
-          <entry key="project.open.time.17" value="1" />
-          <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.19" value="2" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.20" value="2" />
-          <entry key="project.open.time.21" value="5" />
-          <entry key="project.open.time.22" value="3" />
-          <entry key="project.open.time.23" value="9" />
-          <entry key="project.open.time.24" value="12" />
-          <entry key="project.open.time.25" value="19" />
-          <entry key="project.open.time.26" value="13" />
-          <entry key="project.open.time.27" value="14" />
-          <entry key="project.open.time.28" value="20" />
-          <entry key="project.open.time.29" value="22" />
-          <entry key="project.open.time.30" value="18" />
-          <entry key="project.open.time.31" value="14" />
-          <entry key="project.open.time.32" value="7" />
-          <entry key="project.open.time.33" value="12" />
-          <entry key="project.open.time.34" value="15" />
-          <entry key="project.open.time.35" value="9" />
-          <entry key="project.open.time.36" value="6" />
-          <entry key="project.open.time.37" value="10" />
-          <entry key="project.open.time.38" value="7" />
-          <entry key="project.open.time.39" value="6" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.40" value="2" />
-          <entry key="project.open.time.41" value="3" />
-          <entry key="project.open.time.42" value="5" />
-          <entry key="project.open.time.44" value="1" />
-          <entry key="project.open.time.45" value="3" />
-          <entry key="project.open.time.46" value="3" />
-          <entry key="project.open.time.47" value="3" />
-          <entry key="project.open.time.48" value="1" />
-          <entry key="project.open.time.50" value="2" />
-          <entry key="project.open.time.52" value="1" />
-          <entry key="project.open.time.53" value="1" />
-          <entry key="project.open.time.55" value="1" />
-          <entry key="project.open.time.56" value="1" />
-          <entry key="project.open.time.58" value="1" />
-          <entry key="project.open.time.67" value="1" />
-          <entry key="project.open.time.69" value="1" />
-          <entry key="project.open.time.74" value="1" />
-          <entry key="project.opened" value="274" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="3" />
-          <entry key="iml" value="14" />
-          <entry key="java" value="558" />
-          <entry key="txt" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="3" />
-          <entry key="IDEA_MODULE" value="18" />
-          <entry key="JAVA" value="782" />
-          <entry key="PLAIN_TEXT" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="574172" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="760781" />
-          <entry key="PLAIN_TEXT" value="138" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-1047075326">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.50" value="1" />
-          <entry key="project.open.time.65" value="1" />
-          <entry key="project.opened" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="7636" />
-          <entry key="PLAIN_TEXT" value="658" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="35" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="PromisingProject" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ServerSide/ServerMain.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ServerSide/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+            <state relative-caret-position="274">
+              <caret line="274" column="45" lean-forward="true" selection-start-line="274" selection-start-column="45" selection-end-line="274" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ClientSide/ClientAPI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="247" column="30" selection-start-line="247" selection-start-column="30" selection-end-line="247" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#9820#9821#0" expanded="true" />
+                <element signature="e#9865#9866#0" expanded="true" />
+                <element signature="e#9917#9918#0" expanded="true" />
+                <element signature="e#9967#9968#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ClientSide/API_Tester.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="83" column="43" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ServerSide/ClientDetails.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="74">
+              <caret line="82" column="51" selection-start-line="82" selection-start-column="51" selection-end-line="82" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -281,11 +215,11 @@
         <option value="$PROJECT_DIR$/src/ClientSide/Login_GUI.java" />
         <option value="$PROJECT_DIR$/src/ClientSide/GUI_Interface/Login_GUI.java" />
         <option value="$PROJECT_DIR$/src/ClientSide/GUI_Interface/Client_GUI.java" />
-        <option value="$PROJECT_DIR$/src/ClientSide/ClientAPI.java" />
         <option value="$PROJECT_DIR$/src/ClientSide/GUI_Interface/BackgroundUpdate.java" />
-        <option value="$PROJECT_DIR$/src/ServerSide/ClientDetails.java" />
         <option value="$PROJECT_DIR$/src/ClientSide/API_Tester.java" />
+        <option value="$PROJECT_DIR$/src/ClientSide/ClientAPI.java" />
         <option value="$PROJECT_DIR$/src/ServerSide/Server.java" />
+        <option value="$PROJECT_DIR$/src/ServerSide/ClientDetails.java" />
       </list>
     </option>
   </component>
@@ -323,8 +257,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -360,6 +292,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -384,7 +318,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ServerMain">
+  <component name="RunManager" selected="Application.API_Tester">
     <configuration name="API_Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ClientSide.API_Tester" />
       <module name="PromisingProject" />
@@ -441,8 +375,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ServerMain" />
         <item itemvalue="Application.API_Tester" />
+        <item itemvalue="Application.ServerMain" />
         <item itemvalue="Application.Login_GUI" />
         <item itemvalue="Application.ClientAPI" />
         <item itemvalue="Application.CP" />
@@ -607,14 +541,20 @@
       <option name="project" value="LOCAL" />
       <updated>1558213836186</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Encryption bug fixed in APIs">
+      <created>1558219978490</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1558219978490</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="25" width="1309" height="743" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="25" width="1366" height="692" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49597856" visible="true" weight="0.24307205" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49597856" visible="true" weight="0.23863636" />
       <window_info id="Structure" order="1" sideWeight="0.50402147" side_tool="true" weight="0.17181315" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -623,14 +563,14 @@
       <window_info id="Favorites" order="6" sideWeight="0.500813" side_tool="true" weight="0.19477434" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32626426" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49722883" weight="0.5252855" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49722883" visible="true" weight="0.5079929" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4996041" weight="0.9380098" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5003959" side_tool="true" weight="0.4420881" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32952693" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3285968" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32463294" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24940617" />
@@ -682,9 +622,6 @@
       </list>
     </option>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Added getAllIPs() and getConnectedIPs()" />
@@ -700,21 +637,15 @@
     <MESSAGE value="all API methods synchronized" />
     <MESSAGE value="Added GUI interfaces" />
     <MESSAGE value="Added getUnreadMessageCount(), getLastKMessages(), getMessagesAfterTime(); renamed refreshPersonalChatHistory() to getPersonalChatHistory() and refreshAllChatHistory() to getAllChatHistory()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added getUnreadMessageCount(), getLastKMessages(), getMessagesAfterTime(); renamed refreshPersonalChatHistory() to getPersonalChatHistory() and refreshAllChatHistory() to getAllChatHistory()" />
+    <MESSAGE value="Encryption bug fixed in APIs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Encryption bug fixed in APIs" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Magic.java" />
-    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/util/BitSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2115">
-          <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/util/BitSet.java" />
     <entry file="file://$PROJECT_DIR$/src/Test.java" />
     <entry file="file://$PROJECT_DIR$/src/JAVA.java" />
     <entry file="file://$PROJECT_DIR$/src/J.java" />
@@ -725,38 +656,14 @@
     <entry file="file://$PROJECT_DIR$/src/DP.java" />
     <entry file="file://$PROJECT_DIR$/src/Hull.java" />
     <entry file="file://$PROJECT_DIR$/out/production/PromisingProject/IO.class" />
-    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/io/PrintStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="599" column="17" selection-start-line="599" selection-start-column="17" selection-end-line="599" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/io/PrintStream.java" />
     <entry file="file://$PROJECT_DIR$/src/Kosaraju.java" />
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/Proto.java" />
     <entry file="file://$PROJECT_DIR$/src/Pro.java" />
-    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3504">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/util/Scanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2508">
-          <caret line="310" lean-forward="true" selection-start-line="310" selection-end-line="310" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/lang/Iterable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-880">
-          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/util/ArrayList.java" />
+    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/util/Scanner.java" />
+    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/lang/Iterable.java" />
     <entry file="file://$PROJECT_DIR$/src/ABC.java" />
     <entry file="file://$PROJECT_DIR$/src/Matrix.java" />
     <entry file="file://$PROJECT_DIR$/src/Fraction.java" />
@@ -773,44 +680,35 @@
     <entry file="file://$PROJECT_DIR$/src/Solution.java" />
     <entry file="file://$PROJECT_DIR$/src/Assgn.java" />
     <entry file="file://$PROJECT_DIR$/src/SocketProg.java" />
-    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/net/ServerSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="133" column="11" selection-start-line="133" selection-start-column="11" selection-end-line="133" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/net/ServerSocket.java" />
     <entry file="file://$PROJECT_DIR$/src/myTreeSet.java" />
     <entry file="file://$PROJECT_DIR$/src/Cp.java" />
     <entry file="file://$PROJECT_DIR$/src/CP.java" />
     <entry file="file://$PROJECT_DIR$/src/ServerSide/API_Tester.java" />
-    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/net/Socket.java">
+    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/net/Socket.java" />
+    <entry file="file://$PROJECT_DIR$/src/ServerSide/MessageDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9064">
-          <caret line="445" lean-forward="true" selection-start-line="445" selection-end-line="445" />
+        <state relative-caret-position="814">
+          <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClientSide/API_Tester.java">
+    <entry file="file://$PROJECT_DIR$/src/ClientSide/GUI_Interface/BackgroundUpdate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="464">
+          <caret line="113" column="41" selection-start-line="113" selection-start-column="41" selection-end-line="113" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClientSide/ClientAPI.java">
+    <entry file="file://$PROJECT_DIR$/src/ClientSide/GUI_Interface/Client_GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5852">
-          <caret line="266" column="46" selection-start-line="266" selection-start-column="30" selection-end-line="266" selection-end-column="46" />
+        <state relative-caret-position="2466">
+          <caret line="321" selection-start-line="321" selection-end-line="321" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7050#7051#0" expanded="true" />
-            <element signature="e#7087#7088#0" expanded="true" />
-            <element signature="e#7140#7141#0" expanded="true" />
-            <element signature="e#7177#7178#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -836,10 +734,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClientSide/GUI_Interface/Login_GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="60" column="11" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1629">
+          <caret line="1054" column="13" selection-start-line="1054" selection-start-column="13" selection-end-line="1054" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ServerSide/ServerMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ClientSide/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="968">
-          <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
             <element signature="e#698#699#0" expanded="true" />
             <element signature="e#746#747#0" expanded="true" />
@@ -853,69 +778,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ServerSide/ClientDetails.java">
+    <entry file="file://$PROJECT_DIR$/src/ClientSide/API_Tester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2200">
-          <caret line="106" column="38" selection-start-line="106" selection-start-column="38" selection-end-line="106" selection-end-column="38" />
+        <state relative-caret-position="169">
+          <caret line="83" column="43" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#795#796#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ServerSide/MessageDetails.java">
+    <entry file="file://$PROJECT_DIR$/src/ClientSide/ClientAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+        <state relative-caret-position="301">
+          <caret line="247" column="30" selection-start-line="247" selection-start-column="30" selection-end-line="247" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#9820#9821#0" expanded="true" />
+            <element signature="e#9865#9866#0" expanded="true" />
+            <element signature="e#9917#9918#0" expanded="true" />
+            <element signature="e#9967#9968#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ServerSide/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="274">
+          <caret line="274" column="45" lean-forward="true" selection-start-line="274" selection-start-column="45" selection-end-line="274" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClientSide/GUI_Interface/BackgroundUpdate.java">
+    <entry file="file://$PROJECT_DIR$/src/ServerSide/ClientDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2816">
-          <caret line="128" column="24" lean-forward="true" selection-start-line="128" selection-start-column="24" selection-end-line="128" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClientSide/GUI_Interface/Client_GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2750">
-          <caret line="316" column="28" selection-start-line="316" selection-start-column="28" selection-end-line="316" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClientSide/GUI_Interface/Login_GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="60" column="11" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ServerSide/ServerMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        <state relative-caret-position="74">
+          <caret line="82" column="51" selection-start-line="82" selection-start-column="51" selection-end-line="82" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
