@@ -23,6 +23,10 @@ public class API_Tester {
         System.out.println("11 for refresh all chat");
         System.out.println("12 for send message");
         System.out.println("13 for get user details");
+        System.out.println("14 for get Total Unread Message Count");
+        System.out.println("15 for get Unread Message Count");
+        System.out.println("16 for getMessage After Time");
+        System.out.println("17 for get Last K Messages");
 
 
         while (true) {
@@ -70,6 +74,19 @@ public class API_Tester {
                 case 13:
                     System.out.println(api.getUserDetails(br.readLine()));
                     break;
+                case 14:
+                    System.out.println(api.getTotalUnreadMessageCount());
+                    break;
+                case 15:
+                    System.out.println(api.getUnreadMessageCount(br.readLine()));
+                    break;
+                case 16:
+                    System.out.println(api.getMessageAfterTime(br.readLine(), Long.parseLong(br.readLine())));
+                    break;
+                case 17:
+                    System.out.println(api.getLastKMessages(br.readLine(), Integer.parseInt(br.readLine())));
+                    break;
+
                 default:
                     System.out.println("Invalid choice !!!");
             }

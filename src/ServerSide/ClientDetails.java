@@ -86,6 +86,9 @@ public class ClientDetails {
             }
         }
 
+        TOTAL_UNREAD_COUNT -= getUNREAD_COUNT(username);
+        UNREAD_COUNT.put(username, 0);
+
         return messagesAfterTime;
     }
 
@@ -99,6 +102,9 @@ public class ClientDetails {
                 i >= Math.max(0, allMessages.size() - K); --i) {
             lastKMessages.add(allMessages.get(i));
         }
+
+        TOTAL_UNREAD_COUNT -= getUNREAD_COUNT(username);
+        UNREAD_COUNT.put(username, 0);
 
         return lastKMessages;
     }
