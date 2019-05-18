@@ -2,14 +2,16 @@ package ClientSide;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 import java.net.Socket;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ClientAPI {
-    public static final String STATIC_SERVER_IP = "192.168.0.15"; //*/"13.127.194.179";
+    public static final String STATIC_SERVER_IP = "13.127.194.179";
     public static final int PORT = 7777;
+    public static final String LOCAL_SERVER_IP = "192.168.0.102";
 
     public final static SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 
@@ -32,7 +34,7 @@ public class ClientAPI {
     private DataOutputStream outputStream;
 
     public ClientAPI() throws Exception {
-        serverSocket = new Socket(STATIC_SERVER_IP, PORT);
+        serverSocket = new Socket(LOCAL_SERVER_IP, PORT);
         inputStream = new DataInputStream(serverSocket.getInputStream());
         outputStream = new DataOutputStream(serverSocket.getOutputStream());
 
@@ -239,14 +241,14 @@ public class ClientAPI {
 
     public int getUnreadMessageCount(String username) throws Exception {
         outputStream.writeUTF(GET_UNREAD_COUNT);
-        outputStream.writeUTF(username);
+        outputStream.writeUTF(encrypt(username));
         return Integer.parseInt(inputStream.readUTF());
     }
 
     public ArrayList<Message> getMessageAfterTime(String username, long time)
             throws Exception {
         outputStream.writeUTF(GET_MESSAGES_AFTER_TIME);
-        outputStream.writeUTF(username);
+        outputStream.writeUTF(encrypt(username));
         outputStream.writeUTF(time + "");
 
         ArrayList<Message> messages = new ArrayList<>();
@@ -267,7 +269,7 @@ public class ClientAPI {
     public ArrayList<Message> getLastKMessages(String username, int K)
             throws Exception {
         outputStream.writeUTF(GET_LAST_K_MESSAGES);
-        outputStream.writeUTF(username);
+        outputStream.writeUTF(encrypt(username));
         outputStream.writeUTF(K + "");
 
         ArrayList<Message> messages = new ArrayList<>();
@@ -292,5 +294,10 @@ public class ClientAPI {
 
     private String decrypt(String originalString) {
         return originalString.substring(3);
+    }
+    public void closeConection() throws IOException {
+        outputStream.close();
+        inputStream.close();
+        serverSocket.close();
     }
 }

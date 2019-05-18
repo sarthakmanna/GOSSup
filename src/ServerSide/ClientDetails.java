@@ -76,6 +76,7 @@ public class ClientDetails {
             String username, long time) {
         ArrayList<MessageDetails> allMessages =
                 CONVERSATIONS.getOrDefault(username, new ArrayList<>());
+        System.out.println("hello"+allMessages.size());
         ArrayList<MessageDetails> messagesAfterTime = new ArrayList<>();
 
         for (int i = allMessages.size() - 1; i >= 0; --i) {
