@@ -22,6 +22,8 @@ public class API_Tester {
         System.out.println("10 for refresh personal inbox");
         System.out.println("11 for refresh all chat");
         System.out.println("12 for send message");
+        System.out.println("13 for get user details");
+
 
         while (true) {
             System.out.print("Choice: ");
@@ -57,13 +59,16 @@ public class API_Tester {
                     System.out.println(api.getRecentUsernames());
                     break;
                 case 10:
-                    System.out.println(api.refreshPersonalChatHistory(br.readLine()));
+                    System.out.println(api.getPersonalChatHistory(br.readLine()));
                     break;
                 case 11:
-                    System.out.println(api.refreshAllChatHistory());
+                    System.out.println(api.getAllChatHistory());
                     break;
                 case 12:
                     api.sendMessage(br.readLine(), br.readLine());
+                    break;
+                case 13:
+                    System.out.println(api.getUserDetails(br.readLine()));
                     break;
                 default:
                     System.out.println("Invalid choice !!!");

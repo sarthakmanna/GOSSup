@@ -110,7 +110,7 @@ public class BackgroundUpdate extends Thread {
         if (tfSelected.getText().equals("")) {
             taChat.setText("");
         } else {
-            taChat.setText(formatToText(CLIENT_API.refreshPersonalChatHistory(
+            taChat.setText(formatToText(CLIENT_API.getPersonalChatHistory(
                     tfSelected.getText())));
 
             if (cbAutoScroll.isSelected()) {

@@ -1,5 +1,7 @@
 package ServerSide;
 
+import ClientSide.ClientAPI;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
@@ -16,10 +18,13 @@ public class Server extends Thread {
             WRONG_PASSWORD = "WP", USERNAME_NOT_FOUND_CREATE = "NF",
             YES = "Y", NO = "N";
 
-    public static final String SEND = "SN", REFRESH_ALL = "RA", REFRESH_PERSONAL = "RP",
-            BROADCAST = "BR", GET_ALL_USERS = "AL", GET_ONLINE_USERS = "CN",
-            GET_RECENT_USERS = "RE", GET_ALL_USERNAMES = "AU",
-            GET_ONLINE_USERNAMES = "OU", GET_RECENT_USERNAMES = "RU";
+    public static final String SEND = "SN", REFRESH_ALL = "RA",
+            REFRESH_PERSONAL = "RP", BROADCAST = "BR", GET_ALL_USERS = "AL",
+            GET_ONLINE_USERS = "CN", GET_RECENT_USERS = "RE",
+            GET_ALL_USERNAMES = "AU", GET_ONLINE_USERNAMES = "OU",
+            GET_RECENT_USERNAMES = "RU", GET_USER_DETAILS = "UD",
+            GET_TOTAL_UNREAD_COUNT = "TC", GET_UNREAD_COUNT = "UC",
+            GET_MESSAGES_AFTER_TIME = "MT", GET_LAST_K_MESSAGES = "LK";
 
 
     private Socket clientSocket;
@@ -49,8 +54,8 @@ public class Server extends Thread {
 
                 switch (command) {
                     case SEND: sendMessage(); break;
-                    case REFRESH_ALL: refreshAllChatHistory(); break;
-                    case REFRESH_PERSONAL: refreshPersonalChatHistory(); break;
+                    case REFRESH_ALL: getAllChatHistory(); break;
+                    case REFRESH_PERSONAL: getPersonalChatHistory(); break;
                     case BROADCAST: broadcastMessage(); break;
                     case GET_ALL_USERS: getAllUsers(); break;
                     case GET_ONLINE_USERS: getOnlineUsers(); break;
@@ -58,6 +63,11 @@ public class Server extends Thread {
                     case GET_ALL_USERNAMES: getAllUsernames(); break;
                     case GET_ONLINE_USERNAMES: getOnlineUsernames(); break;
                     case GET_RECENT_USERNAMES: getRecentUsernames(); break;
+                    case GET_USER_DETAILS: getUserDetails(); break;
+                    case GET_TOTAL_UNREAD_COUNT: getTotalUnreadMessageCount(); break;
+                    case GET_UNREAD_COUNT: getUnreadMessageCount(); break;
+                    case GET_MESSAGES_AFTER_TIME: getMessageAfterTime(); break;
+                    case GET_LAST_K_MESSAGES: getLastKMessages(); break;
                     default: System.out.println("WRONG COMMAND: " + command);
                 }
             }
@@ -119,6 +129,8 @@ public class Server extends Thread {
         long timeStamp = new Date().getTime();
         String message = inputStream.readUTF();
 
+        if (!DATABASE.containsKey(destUsername)) return;
+
         ClientDetails sender = clientDetails,
                 receiver = DATABASE.get(destUsername);
 
@@ -126,7 +138,7 @@ public class Server extends Thread {
         receiver.receiveMessage(sender.getUsername(), timeStamp, message);
     }
 
-    public synchronized void refreshPersonalChatHistory() throws Exception {
+    public synchronized void getPersonalChatHistory() throws Exception {
         String withUsername = inputStream.readUTF();
 
         ArrayList<MessageDetails> messageList = clientDetails.getMessageList(withUsername);
@@ -141,7 +153,7 @@ public class Server extends Thread {
         }
     }
 
-    public synchronized void refreshAllChatHistory() throws Exception {
+    public synchronized void getAllChatHistory() throws Exception {
         outputStream.writeUTF(clientDetails.getFriends().size() + "");
 
         for (String withUsername : clientDetails.getFriends()) {
@@ -238,6 +250,59 @@ public class Server extends Thread {
 
         for (String user : recentUsers) {
             outputStream.writeUTF(user);
+        }
+    }
+
+    public synchronized void getUserDetails() throws Exception {
+        String user = inputStream.readUTF();
+        ClientDetails userDetails = DATABASE.get(user);
+
+        outputStream.writeUTF(ACTIVE_CLIENTS.contains(user) ? "ONLINE" :
+                userDetails.getLastSeenTime() + "");
+        outputStream.writeUTF(clientDetails.hasChattedBefore(user) ?
+                YES : NO);
+    }
+
+    public synchronized void getTotalUnreadMessageCount() throws Exception {
+        outputStream.writeUTF(clientDetails.getTOTAL_UNREAD_COUNT() + "");
+    }
+
+    public synchronized void getUnreadMessageCount() throws Exception {
+        String username = inputStream.readUTF();
+        outputStream.writeUTF(clientDetails.getUNREAD_COUNT(username) + "");
+    }
+
+    public synchronized void getMessageAfterTime() throws Exception {
+        String username = inputStream.readUTF();
+        long time = Long.parseLong(inputStream.readUTF());
+
+        ArrayList<MessageDetails> messageList =
+                clientDetails.getMessageAfterTime(username, time);
+
+        outputStream.writeUTF(messageList.size() + "");
+
+        for (MessageDetails message : messageList) {
+            outputStream.writeUTF(message.getUserInvolved());
+            outputStream.writeUTF(message.getTimeStamp() + "");
+            outputStream.writeUTF(message.getMessage());
+            outputStream.writeUTF(message.isSent() ? YES : NO);
+        }
+    }
+
+    public synchronized void getLastKMessages() throws Exception {
+        String username = inputStream.readUTF();
+        int K = Integer.parseInt(inputStream.readUTF());
+
+        ArrayList<MessageDetails> messageList =
+                clientDetails.getLastKMessages(username, K);
+
+        outputStream.writeUTF(messageList.size() + "");
+
+        for (MessageDetails message : messageList) {
+            outputStream.writeUTF(message.getUserInvolved());
+            outputStream.writeUTF(message.getTimeStamp() + "");
+            outputStream.writeUTF(message.getMessage());
+            outputStream.writeUTF(message.isSent() ? YES : NO);
         }
     }
 }
