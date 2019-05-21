@@ -2,6 +2,7 @@ package ServerSide;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Collections;
 
 public class ClientDetails {
     private final String USERNAME, UNIQUEID;
@@ -80,12 +81,13 @@ public class ClientDetails {
         ArrayList<MessageDetails> messagesAfterTime = new ArrayList<>();
 
         for (int i = allMessages.size() - 1; i >= 0; --i) {
-            if (allMessages.get(i).getTimeStamp() >= time) {
+            if (allMessages.get(i).getTimeStamp() > time) {
                 messagesAfterTime.add(allMessages.get(i));
             } else {
                 break;
             }
         }
+        Collections.reverse(messagesAfterTime);
 
         TOTAL_UNREAD_COUNT -= getUNREAD_COUNT(username);
         UNREAD_COUNT.put(username, 0);
@@ -103,6 +105,7 @@ public class ClientDetails {
                 i >= Math.max(0, allMessages.size() - K); --i) {
             lastKMessages.add(allMessages.get(i));
         }
+        Collections.reverse(lastKMessages);
 
         TOTAL_UNREAD_COUNT -= getUNREAD_COUNT(username);
         UNREAD_COUNT.put(username, 0);
